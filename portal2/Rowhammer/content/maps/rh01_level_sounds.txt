@@ -1,0 +1,44 @@
+rowhammer.alarm1
+{
+    channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+    soundlevel SNDLVL_TALKING
+    wave       "rowhammer/alarm1.wav"
+}
+
+rowhammer.alarm2
+{
+    channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+    soundlevel SNDLVL_TALKING
+    wave       "rowhammer/alarm2.wav"
+}
+
+rowhammer.alarm3
+{
+    channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+    soundlevel SNDLVL_TALKING
+    wave       "rowhammer/alarm3.wav"
+}
+
+rowhammer.alarm4
+{
+    channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+    soundlevel SNDLVL_TALKING
+    wave       "rowhammer/alarm4.wav"
+}
+
+rowhammer.alarm5
+{
+    channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+    soundlevel SNDLVL_TALKING
+    wave       "rowhammer/alarm5.wav"
+}

@@ -1,0 +1,8 @@
+UnlitGeneric
+{
+	$basetexture "rowhammer/bubble"
+	$alphatest 1
+	$alphatestreference 0.5
+	$allowalphatocoverage 1
+	$surfaceprop "glass"
+}
