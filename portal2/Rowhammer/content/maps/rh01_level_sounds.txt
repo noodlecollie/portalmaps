@@ -42,3 +42,12 @@ rowhammer.alarm5
     soundlevel SNDLVL_TALKING
     wave       "rowhammer/alarm5.wav"
 }
+
+Buttons.snd33
+{
+	channel CHAN_ITEM
+	volume VOL_NORM
+	pitch PITCH_NORM
+	soundlevel SNDLVL_NORM
+	wave "ui/beepclear.wav"
+}
