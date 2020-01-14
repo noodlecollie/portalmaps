@@ -51,3 +51,66 @@ Buttons.snd33
 	soundlevel SNDLVL_NORM
 	wave "ui/beepclear.wav"
 }
+
+rowhammer.endscript.1
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_1.wav"
+}
+
+rowhammer.endscript.2a
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_2a.wav"
+}
+
+rowhammer.endscript.2b
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_2b.wav"
+}
+
+rowhammer.endscript.2c
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_2c.wav"
+}
+
+rowhammer.endscript.3
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_3.wav"
+}
+
+rowhammer.endscript.4
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_4.wav"
+}
+
+rowhammer.endscript.5
+{
+	channel    CHAN_VOICE
+    volume     VOL_NORM
+    pitch      PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave       "rowhammer/endscript_5.wav"
+}
