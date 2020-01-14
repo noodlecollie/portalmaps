@@ -1,116 +1,98 @@
 rowhammer.alarm1
 {
-    channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-    soundlevel SNDLVL_TALKING
-    wave       "rowhammer/alarm1.wav"
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_TALKING
+	wave	   "rowhammer/alarm1.wav"
 }
 
 rowhammer.alarm2
 {
-    channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-    soundlevel SNDLVL_TALKING
-    wave       "rowhammer/alarm2.wav"
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_TALKING
+	wave	   "rowhammer/alarm2.wav"
 }
 
 rowhammer.alarm3
 {
-    channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-    soundlevel SNDLVL_TALKING
-    wave       "rowhammer/alarm3.wav"
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_TALKING
+	wave	   "rowhammer/alarm3.wav"
 }
 
 rowhammer.alarm4
 {
-    channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-    soundlevel SNDLVL_TALKING
-    wave       "rowhammer/alarm4.wav"
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_TALKING
+	wave	   "rowhammer/alarm4.wav"
 }
 
 rowhammer.alarm5
 {
-    channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-    soundlevel SNDLVL_TALKING
-    wave       "rowhammer/alarm5.wav"
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_TALKING
+	wave	   "rowhammer/alarm5.wav"
 }
 
 Buttons.snd33
 {
 	channel CHAN_ITEM
-	volume VOL_NORM
+	volume 0.7
 	pitch PITCH_NORM
 	soundlevel SNDLVL_NORM
 	wave "ui/beepclear.wav"
 }
 
+rowhammer.beginscript.1
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map1-vo1.wav"
+}
+
 rowhammer.endscript.1
 {
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
 	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_1.wav"
+	wave	   "rowhammer/map1-vo2.wav"
 }
 
-rowhammer.endscript.2a
+rowhammer.endscript.2
 {
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
 	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_2a.wav"
+	wave	   "rowhammer/map1-vo3.wav"
 }
 
-rowhammer.endscript.2b
+rowhammer.secretscript.1
 {
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
 	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_2b.wav"
+	wave	   "rowhammer/map1-vo4.wav"
 }
 
-rowhammer.endscript.2c
+rowhammer.secretscript.2
 {
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
 	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_2c.wav"
-}
-
-rowhammer.endscript.3
-{
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_3.wav"
-}
-
-rowhammer.endscript.4
-{
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_4.wav"
-}
-
-rowhammer.endscript.5
-{
-	channel    CHAN_VOICE
-    volume     VOL_NORM
-    pitch      PITCH_NORM
-	soundlevel SNDLVL_NONE
-	wave       "rowhammer/endscript_5.wav"
+	wave	   "rowhammer/map1-vo5.wav"
 }
