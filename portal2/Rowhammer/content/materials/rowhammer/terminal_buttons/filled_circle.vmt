@@ -1,0 +1,16 @@
+UnlitGeneric
+{
+	$basetexture "rowhammer/terminal_buttons/filled_circle"
+	$alphatest 1
+	$alphatestreference 0.5
+	$allowalphatocoverage 1
+	$surfaceprop "glass"
+	
+	// This must be here in order for the texture to react to the entity render colour setting.
+	Proxies
+	{
+		Empty
+		{
+		}
+	}
+}

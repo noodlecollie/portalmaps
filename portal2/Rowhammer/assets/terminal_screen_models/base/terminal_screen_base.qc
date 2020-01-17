@@ -1,8 +1,8 @@
-$modelname "rowhammer/terminal_button.mdl"
+$modelname "rowhammer/terminal_screen_base.mdl"
 
 $bodygroup "default"
 {
-	studio "symbol_button.smd"
+	studio "terminal_screen_base.smd"
 }
 
 $surfaceprop "glass"
@@ -11,21 +11,17 @@ $contents "solid"
 
 $illumposition 0 0 0
 
-$cdmaterials "models/rowhammer/terminal_buttons"
+$cdmaterials "models/rowhammer/terminal_screen_base"
 
 $texturegroup "skinfamilies"
 {
-	{ "filled_square" }
-	{ "square" }
-	{ "square_dot" }
-	{ "filled_circle" }
-	{ "circle" }
-	{ "circle_dot" }
+	{ "terminal_screen_base" }
+	{ "terminal_screen_base2" }
 }
 
 $cbox 0 0 0 0 0 0
 
-$bbox 0 0 0 1 3 3
+$bbox -4 -22.8 -11.45 0 22.8 11.45
 
 $definebone "root" "" 0 0 0 0 0 0 0 0 0 0 0 0
 
