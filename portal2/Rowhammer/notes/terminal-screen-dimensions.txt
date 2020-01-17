@@ -1,0 +1,3 @@
+45.6 x 22.9
+Ratio of 1.99:1
+Texture of 512x256 should be fine
