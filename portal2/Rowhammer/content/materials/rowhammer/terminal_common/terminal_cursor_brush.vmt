@@ -1,0 +1,24 @@
+UnlitGeneric
+{
+	$basetexture "rowhammer/terminal_common/terminal_cursor"
+	$surfaceprop "glass"
+	
+	Proxies
+	{
+		Sine
+		{
+			resultVar	$alpha
+			sineperiod	1
+			sinemin		-1
+			sinemax		2
+		}
+		
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 $alpha
+			resultVar $alpha
+		}
+	}
+}

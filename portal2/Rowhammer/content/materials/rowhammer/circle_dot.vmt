@@ -1,8 +1,0 @@
-UnlitGeneric
-{
-	$basetexture "rowhammer/circle_dot"
-	$alphatest 1
-	$alphatestreference 0.5
-	$allowalphatocoverage 1
-	$surfaceprop "glass"
-}

@@ -1,3 +1,7 @@
 45.6 x 22.9
 Ratio of 1.99:1
 Texture of 512x256 should be fine
+
+Should also work out width and height of each character so that
+we can create a flashing cursor and position in on-screen via
+script according to line and character index.
