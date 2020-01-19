@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "139"
+	"mapversion" "144"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "1"
+	"nGridSpacing" "64"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "139"
+	"mapversion" "144"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1258,7 +1258,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "10"
 	"solid" "6"
-	"origin" "-168 325 69"
+	"origin" "-168 330 69"
 	editor
 	{
 		"color" "220 30 220"
@@ -1281,7 +1281,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "10"
 	"solid" "6"
-	"origin" "-168 335 69"
+	"origin" "-168 340 69"
 	editor
 	{
 		"color" "220 30 220"
@@ -1304,30 +1304,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "10"
 	"solid" "6"
-	"origin" "-168 345 69"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "1694"
-	"classname" "prop_dynamic"
-	"angles" "0 0 0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"model" "models/rowhammer/terminal_screen_threebit.mdl"
-	"renderamt" "255"
-	"rendercolor" "252 205 109"
-	"skin" "5"
-	"solid" "6"
-	"origin" "-168 355 69"
+	"origin" "-168 350 69"
 	editor
 	{
 		"color" "220 30 220"
@@ -1350,7 +1327,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "6"
 	"solid" "6"
-	"origin" "-168 325 66"
+	"origin" "-168 330 66"
 	editor
 	{
 		"color" "220 30 220"
@@ -1373,7 +1350,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "6"
 	"solid" "6"
-	"origin" "-168 335 66"
+	"origin" "-168 340 66"
 	editor
 	{
 		"color" "220 30 220"
@@ -1396,30 +1373,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "6"
 	"solid" "6"
-	"origin" "-168 345 66"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "1726"
-	"classname" "prop_dynamic"
-	"angles" "0 0 0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"model" "models/rowhammer/terminal_screen_threebit.mdl"
-	"renderamt" "255"
-	"rendercolor" "252 205 109"
-	"skin" "3"
-	"solid" "6"
-	"origin" "-168 355 66"
+	"origin" "-168 350 66"
 	editor
 	{
 		"color" "220 30 220"
@@ -1442,7 +1396,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "2"
 	"solid" "6"
-	"origin" "-168 325 61"
+	"origin" "-168 330 61"
 	editor
 	{
 		"color" "220 30 220"
@@ -1465,7 +1419,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "14"
 	"solid" "6"
-	"origin" "-168 335 61"
+	"origin" "-168 340 61"
 	editor
 	{
 		"color" "220 30 220"
@@ -1488,30 +1442,7 @@ entity
 	"rendercolor" "252 205 109"
 	"skin" "12"
 	"solid" "6"
-	"origin" "-168 345 61"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "1822"
-	"classname" "prop_dynamic"
-	"angles" "0 0 0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"model" "models/rowhammer/terminal_screen_halfbyte.mdl"
-	"renderamt" "255"
-	"rendercolor" "252 205 109"
-	"skin" "3"
-	"solid" "6"
-	"origin" "-168 355 61"
+	"origin" "-168 350 61"
 	editor
 	{
 		"color" "220 30 220"
@@ -1570,6 +1501,438 @@ entity
 }
 entity
 {
+	"id" "2160"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "0"
+	"solid" "6"
+	"origin" "-168 333 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2179"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "2"
+	"solid" "6"
+	"origin" "-168 343 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2191"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "4"
+	"solid" "6"
+	"origin" "-168 353 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2203"
+	"classname" "prop_dynamic"
+	"angles" "0 270 0"
+	"disableshadows" "1"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_button.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "5"
+	"solid" "6"
+	"origin" "-169 415 55"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2207"
+	"classname" "prop_dynamic"
+	"angles" "0 270 0"
+	"disableshadows" "1"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_button.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "4"
+	"solid" "6"
+	"origin" "-169 376 55"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2211"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_halfbyte.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "9"
+	"solid" "6"
+	"origin" "-168 383 61"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2215"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "6"
+	"solid" "6"
+	"origin" "-168 384 66"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2219"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "5"
+	"solid" "6"
+	"origin" "-168 384 69"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2223"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "1"
+	"solid" "6"
+	"origin" "-168 386 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2227"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "3"
+	"solid" "6"
+	"origin" "-168 396 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2231"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "5"
+	"solid" "6"
+	"origin" "-168 394 69"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2235"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "6"
+	"solid" "6"
+	"origin" "-168 394 66"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2239"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_halfbyte.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "15"
+	"solid" "6"
+	"origin" "-168 393 61"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2243"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_halfbyte.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "6"
+	"solid" "6"
+	"origin" "-168 403 61"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2247"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "6"
+	"solid" "6"
+	"origin" "-168 404 66"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2251"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_threebit.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "5"
+	"solid" "6"
+	"origin" "-168 404 69"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2255"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_operator.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "5"
+	"solid" "6"
+	"origin" "-168 406 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2259"
+	"classname" "prop_static"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"model" "models/props/lab_monitor_pose01/lab_monitor_pose01.mdl"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"skin" "3"
+	"solid" "6"
+	"origin" "-168 397 64"
+	editor
+	{
+		"color" "255 255 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2461"
+	"classname" "light"
+	"_light" "255 255 255 200"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "1"
+	"_quadratic_attn" "0.5"
+	"origin" "0 320 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3000]"
+	}
+}
+entity
+{
 	"id" "1567"
 	"classname" "prop_static"
 	"angles" "0 0 0"
@@ -1589,32 +1952,29 @@ entity
 		"logicalpos" "[0 0]"
 	}
 }
-hidden
+entity
 {
-	entity
+	"id" "1407"
+	"classname" "prop_dynamic"
+	"angles" "0 270 0"
+	"disableshadows" "1"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"model" "models/rowhammer/terminal_screen_base.mdl"
+	"renderamt" "255"
+	"rendercolor" "252 205 109"
+	"skin" "0"
+	"solid" "6"
+	"targetname" "terminal_screen"
+	"origin" "-168 288 64"
+	editor
 	{
-		"id" "1407"
-		"classname" "prop_dynamic"
-		"angles" "0 270 0"
-		"disableshadows" "1"
-		"fademindist" "-1"
-		"fadescale" "1"
-		"MaxAnimTime" "10"
-		"MinAnimTime" "5"
-		"model" "models/rowhammer/terminal_screen_base.mdl"
-		"renderamt" "255"
-		"rendercolor" "252 205 109"
-		"skin" "0"
-		"solid" "6"
-		"targetname" "terminal_screen"
-		"origin" "-168 288 64"
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-			"logicalpos" "[0 0]"
-		}
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 entity
@@ -4766,15 +5126,11 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-138.835 353.294 73.7612]"
-		"look" "[-481.637 333.609 3.27866]"
+		"position" "[-95.9485 360.449 89.0466]"
+		"look" "[-430.379 388.021 -12.2666]"
 	}
 }
 cordons
 {
 	"active" "0"
-}
-quickhide
-{
-	"count" "4"
 }
