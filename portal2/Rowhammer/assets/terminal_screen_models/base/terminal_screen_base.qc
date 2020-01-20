@@ -15,6 +15,7 @@ $cdmaterials "models/rowhammer/terminal_screen_base"
 
 $texturegroup "skinfamilies"
 {
+	{ "terminal_screen_empty" }
 	{ "terminal_screen_base" }
 	{ "terminal_screen_base2" }
 }
@@ -25,13 +26,4 @@ $bbox -4 -22.8 -11.45 0 22.8 11.45
 
 $definebone "root" "" 0 0 0 0 0 0 0 0 0 0 0 0
 
-$sequence "BindPose" {
-	"BindPose.smd"
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
-
-$KeyValues
-{
-}
+$sequence "BindPose" "terminal_screen_base"

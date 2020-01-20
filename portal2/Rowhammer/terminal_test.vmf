@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "144"
+	"mapversion" "165"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "64"
+	"nGridSpacing" "8"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "144"
+	"mapversion" "165"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1933,6 +1933,42 @@ entity
 }
 entity
 {
+	"id" "2480"
+	"classname" "func_instance"
+	"angles" "-0 -90 0"
+	"file" "instances/rowhammer/terminals/test.vmf"
+	"replace01" "$screen_colour 243 118 86"
+	"replace02" "$screen_script rowhammer/terminals/test.nut"
+	"targetname" "terminal_test1"
+	"origin" "64 488 64"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "2610"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "terminal_test1instance:init;Trigger0-1"
+	}
+	"origin" "107.205 503 73.2859"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
 	"id" "1567"
 	"classname" "prop_static"
 	"angles" "0 0 0"
@@ -1956,7 +1992,7 @@ entity
 {
 	"id" "1407"
 	"classname" "prop_dynamic"
-	"angles" "0 270 0"
+	"angles" "0 0 0"
 	"disableshadows" "1"
 	"fademindist" "-1"
 	"fadescale" "1"
@@ -1965,7 +2001,7 @@ entity
 	"model" "models/rowhammer/terminal_screen_base.mdl"
 	"renderamt" "255"
 	"rendercolor" "252 205 109"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"targetname" "terminal_screen"
 	"origin" "-168 288 64"
@@ -2252,7 +2288,7 @@ entity
 	{
 		"OnIn" "terminal_btn_mdl_leftSkin20-1"
 		"OnOut" "terminal_btn_mdl_leftSkin10-1"
-		"OnOut" "terminal_screenSkin00-1"
+		"OnOut" "terminal_screenSkin10-1"
 	}
 	solid
 	{
@@ -2364,7 +2400,7 @@ entity
 	{
 		"OnIn" "terminal_btn_mdl_rightSkin50-1"
 		"OnOut" "terminal_btn_mdl_rightSkin40-1"
-		"OnOut" "terminal_screenSkin10-1"
+		"OnOut" "terminal_screenSkin20-1"
 	}
 	solid
 	{
@@ -5126,8 +5162,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-95.9485 360.449 89.0466]"
-		"look" "[-430.379 388.021 -12.2666]"
+		"position" "[16.3111 334.897 124.192]"
+		"look" "[221.222 553.778 -57.3902]"
 	}
 }
 cordons
