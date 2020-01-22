@@ -13,5 +13,7 @@ IncludeScript("rowhammer/terminals/common/MapInterface.nut");
 printl("*** ROWHAMMER: Calling terminal script test.nut ***");
 printl("Entity using script: " + self.GetName() + " (" + self.GetClassname() + ")");
 
-::RHTerminal.SetStaticTerminalInstance(::RHTerminal.TerminalInstance(self));
 ::RHTerminal.BeginEntityRegistration()
+
+local instance = ::RHTerminal.GetStaticTerminalInstance()
+instance.SetMonitorSkin(::RHTerminal.MonitorSkin.ON)

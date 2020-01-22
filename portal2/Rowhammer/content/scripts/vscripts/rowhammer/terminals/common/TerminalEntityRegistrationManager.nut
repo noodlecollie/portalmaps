@@ -43,7 +43,8 @@ class ::RHTerminal.TerminalEntityRegistrationManager
         [::RHTerminal.EntityId.BUTTON_LEFT] = "LeftButton",
         [::RHTerminal.EntityId.BUTTON_RIGHT] = "RightButton",
         [::RHTerminal.EntityId.BUTTON_SYM_LEFT] = "LeftButtonSymbol",
-        [::RHTerminal.EntityId.BUTTON_SYM_RIGHT] = "RightButtonSymbol"
+        [::RHTerminal.EntityId.BUTTON_SYM_RIGHT] = "RightButtonSymbol",
+        [::RHTerminal.EntityId.MONITOR_SKIN] = "MonitorSkin"
     };
 }
 

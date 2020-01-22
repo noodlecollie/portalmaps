@@ -31,11 +31,21 @@ IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
     _COUNT = 6
 };
 
+::RHTerminal.MonitorSkin <-
+{
+    ON = 3,
+    OFF = 4
+};
+
+// These must correspond to entity names in the terminal instance.
+// They are checked as suffixes on the in-game entity names, so
+// avoid choosing IDs where one ID is a suffix of a longer ID.
 ::RHTerminal.EntityId <-
 {
     SCREEN = "screen",
     BUTTON_LEFT = "button_left",
     BUTTON_RIGHT = "button_right",
     BUTTON_SYM_LEFT = "button_left_symbol",
-    BUTTON_SYM_RIGHT = "button_right_symbol"
+    BUTTON_SYM_RIGHT = "button_right_symbol",
+    MONITOR_SKIN = "monitor_skin"
 };

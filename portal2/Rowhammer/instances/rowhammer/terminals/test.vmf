@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "49"
+	"mapversion" "61"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,13 +20,33 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "49"
+	"mapversion" "61"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
 	"maxblobcount" "250"
 	"maxpropscreenwidth" "-1"
 	"skyname" "sky_black_nofog"
+}
+entity
+{
+	"id" "622"
+	"classname" "math_counter"
+	"targetname" "monitor_skin"
+	connections
+	{
+		"OnUser2" "monitor_modelFireUser20-1"
+		"OutValue" "monitor_modelSkin0-1"
+		"OnGetValue" "monitor_modelSkin0-1"
+	}
+	"origin" "0 8 40"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
 }
 entity
 {
@@ -51,7 +71,7 @@ entity
 	"renderfx" "0"
 	"rendermode" "0"
 	"SetBodyGroup" "0"
-	"skin" "3"
+	"skin" "4"
 	"solid" "6"
 	"spawnflags" "0"
 	"StartDisabled" "0"
@@ -64,6 +84,7 @@ entity
 		"OnUser1" "button_left_symbolFireUser20-1"
 		"OnUser1" "screenFireUser20-1"
 		"OnUser1" "button_right_symbolFireUser20-1"
+		"OnUser1" "monitor_skinFireUser20-1"
 	}
 	"origin" "0 0 0"
 	editor
@@ -91,6 +112,7 @@ entity
 	"rendercolor" "$screen_colour"
 	"skin" "0"
 	"solid" "6"
+	"StartDisabled" "1"
 	"targetname" "button_left_symbol"
 	connections
 	{
@@ -233,6 +255,7 @@ entity
 	"rendercolor" "$screen_colour"
 	"skin" "0"
 	"solid" "6"
+	"StartDisabled" "1"
 	"targetname" "button_right_symbol"
 	connections
 	{
@@ -385,7 +408,7 @@ entity
 	{
 		"OnTrigger" "monitor_modelRunScriptFile$screen_script0-1"
 	}
-	"origin" "0 0 40"
+	"origin" "0 -8 40"
 	editor
 	{
 		"color" "220 30 220"
@@ -422,11 +445,11 @@ entity
 	"MaxAnimTime" "10"
 	"MinAnimTime" "5"
 	"model" "models/rowhammer/terminal_screen_base.mdl"
-	"parentname" "button_right"
 	"renderamt" "255"
 	"rendercolor" "$screen_colour"
 	"skin" "0"
 	"solid" "6"
+	"StartDisabled" "1"
 	"targetname" "screen"
 	connections
 	{

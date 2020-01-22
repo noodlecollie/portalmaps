@@ -14,7 +14,13 @@ class ::RHTerminal.TerminalInstance
         Monitor = monitor;
     }
 
+    function SetMonitorSkin(skin)
+    {
+        EntFireByHandle(MonitorSkin, "SetValue", skin.tostring(), 0, Monitor, Monitor);
+    }
+
     Monitor = null;
+    MonitorSkin = null;
     Screen = null;
     LeftButton = null;
     LeftButtonSymbol = null;
@@ -22,7 +28,9 @@ class ::RHTerminal.TerminalInstance
     RightButtonSymbol = null;
 }
 
-::RHTerminal.StaticTerminalInstance <- null;
+// When this script is loaded for the entity, this line will be called.
+// Self will refer to the entity that loaded the script.
+::RHTerminal.StaticTerminalInstance <- ::RHTerminal.TerminalInstance(self)
 
 ::RHTerminal.GetStaticTerminalInstance <- function()
 {
