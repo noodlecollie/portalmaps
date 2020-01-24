@@ -96,3 +96,30 @@ rowhammer.secretscript.2
 	soundlevel SNDLVL_NONE
 	wave	   "rowhammer/map1-vo5.wav"
 }
+
+rowhammer.rha_insert_buildup
+{
+	channel	   CHAN_STATIC
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/reversed_impact.wav"
+}
+
+rowhammer.rha_insert
+{
+	channel	   CHAN_STATIC
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/rha_insert.wav"
+}
+
+rowhammer.rha_spawnbuzz
+{
+	channel	   CHAN_ITEM
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_120dB
+	wave	   "rowhammer/noisy_hum.wav"
+}
