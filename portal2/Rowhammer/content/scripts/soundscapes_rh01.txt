@@ -1,17 +1,18 @@
 "rowhammer.chamber1.firstpass.1"
 {
 	"dsp" "1"
+	
 	"playlooping"
 	{
 		"wave" "ambient\synth\amb_bts_crystal_lp_01.wav"
-		"volume" "0.8"
+		"volume" "0.85"
 		"soundlevel" "SNDLVL_NONE"
 	}
 	
 	"playlooping"
 	{
 		"wave" "ambient\atmosphere\drone_int_lp.wav"
-		"volume" "0.6"
+		"volume" "0.5"
 		"soundlevel" "SNDLVL_NONE"
 	}
 }
@@ -19,17 +20,18 @@
 "rowhammer.chamber1.firstpass.2"
 {
 	"dsp" "1"
+	
 	"playlooping"
 	{
 		"wave" "ambient\synth\amb_bts_crystal_lp_01.wav"
-		"volume" "0.55"
+		"volume" "0.45"
 		"soundlevel" "SNDLVL_NONE"
 	}
 	
 	"playlooping"
 	{
 		"wave" "ambient\atmosphere\drone_int_lp.wav"
-		"volume" "0.75"
+		"volume" "0.85"
 		"soundlevel" "SNDLVL_NONE"
 	}
 	
@@ -47,5 +49,400 @@
 		"volume" "0.4"
 		"position" 1
 		"soundlevel" "SNDLVL_STATIC"
+	}
+	
+	"playrandom"
+	{
+		"time" "8,20"
+		"volume" "0.1,0.2"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\random_abstract\amb_random_tech_01.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_02.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_03.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_04.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_05.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_06.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_07.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_08.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_09.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_10.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_11.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_12.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_13.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_14.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_15.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_16.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_17.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_18.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_19.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_20.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_21.wav"
+		}
+	}
+}
+
+"rowhammer.chamber2.1"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\metal\amb_motor_warehouse_lp_01.wav"
+		"volume" "0.75"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.4"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\tones\amb_abstract_air_lp_05.wav"
+		"volume" "0.4"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playrandom"
+	{
+		"time" "8,20"
+		"volume" "0.1,0.2"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\random_abstract\amb_random_tech_01.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_02.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_03.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_04.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_05.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_06.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_07.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_08.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_09.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_10.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_11.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_12.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_13.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_14.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_15.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_16.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_17.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_18.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_19.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_20.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_21.wav"
+		}
+	}
+}
+
+"rowhammer.chamber2.2"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.85"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\props\vents\tonal_vent_lp_01.wav"
+		"volume" "0.7"
+		"soundlevel" "SNDLVL_70dB"
+		"position" 0
+	}
+	
+	"playrandom"
+	{
+		"time" "8,20"
+		"volume" "0.1,0.2"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\random_abstract\amb_random_tech_01.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_02.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_03.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_04.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_05.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_06.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_07.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_08.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_09.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_10.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_11.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_12.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_13.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_14.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_15.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_16.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_17.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_18.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_19.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_20.wav"
+			"wave"	"ambient\random_abstract\amb_random_tech_21.wav"
+		}
+	}
+}
+
+"rowhammer.chamber2.above"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.7"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\props\vents\tonal_vent_lp_01.wav"
+		"volume" "1.0"
+		"soundlevel" "SNDLVL_70dB"
+		"position" 0
+	}
+}
+
+"rowhammer.ventchannel.1"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\elev_shaft1.wav"
+		"volume" "0.75"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\wind\tube_suck.wav"
+		"volume" "0.3"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\props\vents\tonal_vent_lp_01.wav"
+		"volume" "0.8"
+		"soundlevel" "SNDLVL_70dB"
+		"position" 0
+	}
+	
+	"playrandom"
+	{
+		"time" "8,15"
+		"volume" "0.5,0.9"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_01.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_02.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_03.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_04.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_05.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_06.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_07.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_08.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_09.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_10.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_11.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_12.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_13.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_14.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_15.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_16.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_17.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_18.wav"
+		}
+	}
+}
+
+
+"rowhammer.ventchannel.2"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\elev_shaft1.wav"
+		"volume" "0.75"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\wind\tube_suck.wav"
+		"volume" "0.3"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "world\p2_large_fan_loop_01.wav"
+		"volume" "0.5"
+		"position" "0"
+		"soundlevel" "SNDLVL_NORM"
+	}
+	
+	"playrandom"
+	{
+		"time" "8,15"
+		"volume" "0.5,0.9"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_01.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_02.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_03.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_04.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_05.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_06.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_07.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_08.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_09.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_10.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_11.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_12.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_13.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_14.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_15.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_16.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_17.wav"
+			"wave"	"ambient\industrial\amb_muffled_lo_mach_18.wav"
+		}
+	}
+}
+
+"rowhammer.secret"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.2"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.prevoid"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.2"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playsoundscape"
+	{ 
+		"name" "rowhammer.void"
+
+		"volume" "0.4"
+		"ambientpositionoverride" "0"
+	} 
+}
+
+"rowhammer.void"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\void_atmos1.wav"
+		"volume" "1.0"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playrandom"
+	{
+		"time" "7,12"
+		"volume" "0.6,0.9"
+		"pitch" "90,105"
+		"soundlevel" "SNDLVL_NONE"
+
+		"rndwave"
+		{
+			"wave"	"ambient\random_abstract\amb_boomer_01.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_02.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_03.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_04.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_05.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_06.wav"
+			"wave"	"ambient\random_abstract\amb_boomer_07.wav"
+		}
+	}
+}
+
+"rowhammer.chamber1.secondpass.1"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\ambience5.wav"
+		"volume" "0.2"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.chamber1.secondpass.2"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\ambience5.wav"
+		"volume" "0.85"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_light_waterlap_lp_01.wav"
+		"volume" "0.4"
+		"position" 0
+		"soundlevel" "SNDLVL_STATIC"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_indoor_water_sludge_lp_01.wav"
+		"volume" "0.4"
+		"position" 1
+		"soundlevel" "SNDLVL_STATIC"
+	}
+}
+
+"rowhammer.chamber1.escape"
+{
+	"dsp" "1"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\ambience5.wav"
+		"volume" "0.4"
+		"soundlevel" "SNDLVL_NONE"
 	}
 }
