@@ -1,48 +1,3 @@
-rowhammer.alarm1
-{
-	channel	   CHAN_VOICE
-	volume	   VOL_NORM
-	pitch	   PITCH_NORM
-	soundlevel SNDLVL_TALKING
-	wave	   "rowhammer/alarm1.wav"
-}
-
-rowhammer.alarm2
-{
-	channel	   CHAN_VOICE
-	volume	   VOL_NORM
-	pitch	   PITCH_NORM
-	soundlevel SNDLVL_TALKING
-	wave	   "rowhammer/alarm2.wav"
-}
-
-rowhammer.alarm3
-{
-	channel	   CHAN_VOICE
-	volume	   VOL_NORM
-	pitch	   PITCH_NORM
-	soundlevel SNDLVL_TALKING
-	wave	   "rowhammer/alarm3.wav"
-}
-
-rowhammer.alarm4
-{
-	channel	   CHAN_VOICE
-	volume	   VOL_NORM
-	pitch	   PITCH_NORM
-	soundlevel SNDLVL_TALKING
-	wave	   "rowhammer/alarm4.wav"
-}
-
-rowhammer.alarm5
-{
-	channel	   CHAN_VOICE
-	volume	   VOL_NORM
-	pitch	   PITCH_NORM
-	soundlevel SNDLVL_TALKING
-	wave	   "rowhammer/alarm5.wav"
-}
-
 Buttons.snd33
 {
 	channel CHAN_ITEM
@@ -122,4 +77,22 @@ rowhammer.rha_spawnbuzz
 	pitch	   PITCH_NORM
 	soundlevel SNDLVL_120dB
 	wave	   "rowhammer/noisy_hum.wav"
+}
+
+rowhammer.rebootchimes
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/reboot_chimes.wav"
+}
+
+rowhammer.rha.1
+{
+	channel	   CHAN_ITEM
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_120dB
+	wave	   "rowhammer/rha-vo1.wav"
 }

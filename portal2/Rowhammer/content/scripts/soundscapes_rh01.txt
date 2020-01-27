@@ -1,0 +1,51 @@
+"rowhammer.chamber1.firstpass.1"
+{
+	"dsp" "1"
+	"playlooping"
+	{
+		"wave" "ambient\synth\amb_bts_crystal_lp_01.wav"
+		"volume" "0.8"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.6"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.chamber1.firstpass.2"
+{
+	"dsp" "1"
+	"playlooping"
+	{
+		"wave" "ambient\synth\amb_bts_crystal_lp_01.wav"
+		"volume" "0.55"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\drone_int_lp.wav"
+		"volume" "0.75"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_light_waterlap_lp_01.wav"
+		"volume" "0.4"
+		"position" 0
+		"soundlevel" "SNDLVL_STATIC"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_indoor_water_sludge_lp_01.wav"
+		"volume" "0.4"
+		"position" 1
+		"soundlevel" "SNDLVL_STATIC"
+	}
+}

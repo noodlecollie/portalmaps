@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "241"
+	"mapversion" "243"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -38,7 +38,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "241"
+	"mapversion" "243"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -2745,8 +2745,8 @@ cameras
 	}
 	camera
 	{
-		"position" "[223.434 -512.604 402.915]"
-		"look" "[92.8753 -440.824 237.445]"
+		"position" "[-1.74817 34.8571 -435.442]"
+		"look" "[34.9689 -165.214 -526.007]"
 	}
 	camera
 	{
