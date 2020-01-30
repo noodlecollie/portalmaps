@@ -1,0 +1,6 @@
+UnlitGeneric
+{
+	$basetexture "rowhammer/white"
+	$surfaceprop no_decal
+	%noportal 1
+}

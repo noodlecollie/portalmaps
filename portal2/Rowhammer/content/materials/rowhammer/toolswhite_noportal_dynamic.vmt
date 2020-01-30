@@ -1,0 +1,14 @@
+UnlitGeneric
+{
+	$basetexture "rowhammer/white"
+	$surfaceprop no_decal
+	%noportal 1
+	
+	// This must be here in order for the texture to react to the entity render colour setting.
+	Proxies
+	{
+		Empty
+		{
+		}
+	}
+}
