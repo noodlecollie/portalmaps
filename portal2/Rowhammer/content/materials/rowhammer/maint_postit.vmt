@@ -1,0 +1,10 @@
+LightmappedGeneric
+{
+	$basetexture "rowhammer/maint_postit"
+	$alphatest 1
+	$alphatestreference 0.5
+	$allowalphatocoverage 1
+	$surfaceprop "paper"
+	$decal 1
+	$decalscale 0.1
+}

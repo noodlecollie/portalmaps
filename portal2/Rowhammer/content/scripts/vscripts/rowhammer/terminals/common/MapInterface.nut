@@ -18,19 +18,3 @@ function InputFireUser2()
     // Don't actually fire the output.
     return false;
 }
-
-function RightButtonIn()
-{
-}
-
-function RightButtonOut()
-{
-}
-
-function LeftButtonIn()
-{
-}
-
-function LeftButtonOut()
-{
-}

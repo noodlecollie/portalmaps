@@ -1,0 +1,5 @@
+Good morning, test subject. The Aperture Science Enrichment Centre kindly reminds you that there are no testing protocols running today; this is to allow our robotic and non-robotic engineers to perform scheduled maintenance.
+
+Please make yourself comfortable in your relaxation vault, and a member of the Enrichment Centre team will arrive shortly in order to discuss and revise your scheduled activities.
+
+Hello, engineer. The Aperture Science Level 1 Mainframe Maintenance Terminal is available for use in this exception trap. Please consult the wall panel for access to system diagnostics.

@@ -7,6 +7,7 @@ getroottable()["INC_TERMINALS_COMMON_DEFS"] <- true;
 
 IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
 
+// Corresponds to skins on the button models.
 ::RHTerminal.ButtonSymbolSkin <-
 {
     SQUARE_FILLED = 0,
@@ -19,6 +20,7 @@ IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
     _COUNT = 6
 };
 
+// Corresponds to skins on the operator models.
 ::RHTerminal.OperatorSkin <-
 {
     CHEVRON_UP = 0,
@@ -31,6 +33,7 @@ IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
     _COUNT = 6
 };
 
+// Corresponds to skins on the monitor model.
 ::RHTerminal.MonitorSkin <-
 {
     ON = 3,
@@ -39,7 +42,8 @@ IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
 
 // These must correspond to entity names in the terminal instance.
 // They are checked as suffixes on the in-game entity names, so
-// avoid choosing IDs where one ID is a suffix of a longer ID.
+// avoid choosing IDs where one ID is a suffix of a different, longer ID.
+// Prefixes are OK, though.
 ::RHTerminal.EntityId <-
 {
     SCREEN = "screen",
