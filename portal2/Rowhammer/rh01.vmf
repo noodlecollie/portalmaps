@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "1353"
+	"mapversion" "1363"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -38,7 +38,7 @@ viewsettings
 world
 {
 	"id" "59054"
-	"mapversion" "1353"
+	"mapversion" "1363"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -21634,7 +21634,7 @@ world
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
-			"lightmapscale" "16"
+			"lightmapscale" "8"
 			"smoothing_groups" "0"
 		}
 		side
@@ -31209,7 +31209,7 @@ world
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
-			"lightmapscale" "16"
+			"lightmapscale" "8"
 			"smoothing_groups" "0"
 		}
 		side
@@ -31817,7 +31817,7 @@ world
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
-			"lightmapscale" "16"
+			"lightmapscale" "8"
 			"smoothing_groups" "0"
 		}
 		side
@@ -119370,6 +119370,25 @@ world
 }
 entity
 {
+	"id" "135832"
+	"classname" "light"
+	"_fifty_percent_distance" "25"
+	"_light" "88 250 234 55"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_quadratic_attn" "1"
+	"_zero_percent_distance" "82"
+	"origin" "145.248 1413.77 776.951"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
 	"id" "133700"
 	"classname" "ambient_generic"
 	"health" "10"
@@ -123719,7 +123738,6 @@ entity
 {
 	"id" "118750"
 	"classname" "env_soundscape"
-	"position0" "soundscape_target_slime1"
 	"position1" "soundscape_target_slime2"
 	"radius" "192"
 	"soundscape" "rowhammer.chamber1.secondpass.2"
@@ -123738,7 +123756,6 @@ entity
 {
 	"id" "118904"
 	"classname" "env_soundscape"
-	"position0" "soundscape_target_slime1"
 	"position1" "soundscape_target_slime2"
 	"radius" "96"
 	"soundscape" "rowhammer.chamber1.secondpass.2"
@@ -123774,7 +123791,6 @@ entity
 {
 	"id" "115589"
 	"classname" "env_soundscape"
-	"position0" "soundscape_target_slime1"
 	"position1" "soundscape_target_slime2"
 	"radius" "192"
 	"soundscape" "rowhammer.chamber1.firstpass.2"
@@ -123848,21 +123864,6 @@ entity
 }
 entity
 {
-	"id" "114150"
-	"classname" "info_target"
-	"angles" "0 0 0"
-	"targetname" "soundscape_target_slime1"
-	"origin" "2240 1216 256"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
-	}
-}
-entity
-{
 	"id" "114164"
 	"classname" "info_target"
 	"angles" "0 0 0"
@@ -123880,7 +123881,6 @@ entity
 {
 	"id" "114196"
 	"classname" "env_soundscape"
-	"position0" "soundscape_target_slime1"
 	"position1" "soundscape_target_slime2"
 	"radius" "192"
 	"soundscape" "rowhammer.chamber1.firstpass.2"
@@ -154541,8 +154541,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[2643.67 2424.89 352.796]"
-		"look" "[2615.92 2191.92 215.143]"
+		"position" "[2184.04 1332.29 440.295]"
+		"look" "[1973.25 1169.93 383.736]"
 	}
 }
 cordons
