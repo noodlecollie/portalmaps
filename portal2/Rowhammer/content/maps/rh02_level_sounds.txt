@@ -1,0 +1,63 @@
+// "Tech blip"
+Buttons.snd33
+{
+	channel CHAN_ITEM
+	volume 0.7
+	pitch PITCH_NORM
+	soundlevel SNDLVL_NORM
+	wave "ui/beepclear.wav"
+}
+
+rowhammer.relaxationvault.wakeup
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-vo1.wav"
+}
+
+rowhammer.relaxationvault.info1
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-vo2.wav"
+}
+
+rowhammer.relaxationvault.info2
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-vo3.wav"
+}
+
+rowhammer.relaxationvault.info3
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-vo4.wav"
+}
+
+rowhammer.relaxationvault.info4
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-vo5.wav"
+}
+
+rowhammer.relaxationvault.engineer1
+{
+	channel	   CHAN_VOICE
+	volume	   VOL_NORM
+	pitch	   PITCH_NORM
+	soundlevel SNDLVL_NONE
+	wave	   "rowhammer/map2-engineer1.wav"
+}
