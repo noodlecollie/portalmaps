@@ -285,7 +285,7 @@
 	"playlooping"
 	{
 		"wave" "ambient\atmosphere\ambience5.wav"
-		"volume" "0.85"
+		"volume" "0.2"
 		"soundlevel" "SNDLVL_NONE"
 	}
 	
@@ -305,7 +305,7 @@
 	"playlooping"
 	{
 		"wave" "ambient\atmosphere\ambience5.wav"
-		"volume" "0.4"
+		"volume" "1"
 		"soundlevel" "SNDLVL_NONE"
 	}
 }
