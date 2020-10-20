@@ -10,6 +10,9 @@ IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 IncludeScript("rowhammer/lib/StringLib.nut");
 IncludeScript("rowhammer/lib/Log.nut");
 
+// Given a terminal instance and an entity wishing to register,
+// sets the relevant variable on the terminal instance to point
+// to this entity.
 class ::RHTerminal.TerminalEntityRegistrationManager
 {
     constructor(term)
@@ -51,5 +54,8 @@ class ::RHTerminal.TerminalEntityRegistrationManager
 ::RHTerminal.BeginEntityRegistration <- function()
 {
     local terminal = ::RHTerminal.GetStaticTerminalInstance()
+    
+    // Invoking this will cause RegisterEntity() to be called for each component of the terminal.
+    // The logic to do so occurs in the Hammer map instance for the terminal.
     EntFireByHandle(terminal.Monitor, "FireUser1", "", 0, terminal.Monitor, terminal.Monitor);
 }

@@ -19,6 +19,26 @@ class ::RHTerminal.TerminalInstance
         EntFireByHandle(MonitorSkin, "SetValue", skin.tostring(), 0, Monitor, Monitor);
     }
 
+    function LeftButtonIn()
+    {
+        InputHandler.LeftButtonIn();
+    }
+
+    function LeftButtonOut()
+    {
+        InputHandler.LeftButtonOut();
+    }
+
+    function RightButtonIn()
+    {
+        InputHandler.RightButtonIn();
+    }
+
+    function RightButtonOut()
+    {
+        InputHandler.RightButtonOut();
+    }
+
     Monitor = null;
     MonitorSkin = null;
     Screen = null;
@@ -26,6 +46,27 @@ class ::RHTerminal.TerminalInstance
     LeftButtonSymbol = null;
     RightButton = null;
     RightButtonSymbol = null;
+    InputHandler = null;
+}
+
+// Should be inherited from to handle input from the terminal.
+class ::RHTerminal.InputHandler
+{
+    function LeftButtonIn()
+    {
+    }
+
+    function LeftButtonOut()
+    {
+    }
+
+    function RightButtonIn()
+    {
+    }
+
+    function RightButtonOut()
+    {
+    }
 }
 
 // When this script is loaded for the entity, this line will be called.
@@ -34,6 +75,11 @@ class ::RHTerminal.TerminalInstance
 
 ::RHTerminal.GetStaticTerminalInstance <- function()
 {
+    if ( ::RHTerminal.StaticTerminalInstance == null )
+    {
+        ::Log.DevLog("GetStaticTerminalInstance(): Instance was null!");
+    }
+
     return ::RHTerminal.StaticTerminalInstance;
 }
 

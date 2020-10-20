@@ -12,9 +12,53 @@ IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 function InputFireUser2()
 {
     local instance = ::RHTerminal.GetStaticTerminalInstance();
-    local regMgr = ::RHTerminal.TerminalEntityRegistrationManager(instance);
-    regMgr.RegisterEntity(caller);
+
+    if ( instance )
+    {
+        local regMgr = ::RHTerminal.TerminalEntityRegistrationManager(instance);
+        regMgr.RegisterEntity(caller);
+    }
 
     // Don't actually fire the output.
     return false;
+}
+
+function LeftButtonIn()
+{
+    local instance = ::RHTerminal.GetStaticTerminalInstance();
+
+    if ( instance )
+    {
+        instance.LeftButtonIn();
+    }
+}
+
+function LeftButtonOut()
+{
+    local instance = ::RHTerminal.GetStaticTerminalInstance();
+
+    if ( instance )
+    {
+        instance.LeftButtonOut();
+    }
+}
+
+function RightButtonIn()
+{
+    local instance = ::RHTerminal.GetStaticTerminalInstance();
+
+    if ( instance )
+    {
+        instance.RightButtonIn();
+    }
+}
+
+function RightButtonOut()
+{
+    local instance = ::RHTerminal.GetStaticTerminalInstance();
+
+    if ( instance )
+    {
+        instance.RightButtonOut();
+    }
 }
