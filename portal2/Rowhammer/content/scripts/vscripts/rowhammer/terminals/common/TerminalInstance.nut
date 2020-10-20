@@ -6,84 +6,164 @@ if ( getroottable().rawin("INC_TERMINALS_COMMON_TERMINALINSTANCE") )
 getroottable()["INC_TERMINALS_COMMON_TERMINALINSTANCE"] <- true;
 
 IncludeScript("rowhammer/terminals/common/Defs.nut");
+IncludeScript("rowhammer/lib/StringLib.nut");
+IncludeScript("rowhammer/lib/Log.nut");
+
+class ::RHTerminal.EventHandler
+{
+    function LeftButtonIn(terminal)
+    {
+    }
+
+    function LeftButtonOut(terminal)
+    {
+    }
+
+    function RightButtonIn(terminal)
+    {
+    }
+
+    function RightButtonOut(terminal)
+    {
+    }
+}
 
 class ::RHTerminal.TerminalInstance
 {
     constructor(monitor)
     {
-        Monitor = monitor;
+        _Monitor = monitor;
+        _TerminalName = _Monitor.GetName();
+        _ComponentPrefix = ::StringLib.prefixBeforeFirstHyphen(_TerminalName);
+
+        _FindAllComponents();
     }
 
-    function SetMonitorSkin(skin)
+    function SetEventHandler(handler)
     {
-        EntFireByHandle(MonitorSkin, "SetValue", skin.tostring(), 0, Monitor, Monitor);
+        if ( !(handler instanceof ::RHTerminal.EventHandler) )
+        {
+            ::Log.DevLog("Terminal " + _TerminalName + ": Could not set event handler that does not derive from EventHandler class!");
+            return;
+        }
+
+        _EventHandler = handler;
     }
 
     function LeftButtonIn()
     {
-        InputHandler.LeftButtonIn();
+        if ( _EventHandler != null )
+        {
+            _EventHandler.LeftButtonIn(this);
+        }
     }
 
     function LeftButtonOut()
     {
-        InputHandler.LeftButtonOut();
+        if ( _EventHandler != null )
+        {
+            _EventHandler.LeftButtonOut(this);
+        }
     }
 
     function RightButtonIn()
     {
-        InputHandler.RightButtonIn();
+        if ( _EventHandler != null )
+        {
+            _EventHandler.RightButtonIn(this);
+        }
     }
 
     function RightButtonOut()
     {
-        InputHandler.RightButtonOut();
+        if ( _EventHandler != null )
+        {
+            _EventHandler.RightButtonOut(this);
+        }
     }
 
-    Monitor = null;
-    MonitorSkin = null;
-    Screen = null;
-    LeftButton = null;
-    LeftButtonSymbol = null;
-    RightButton = null;
-    RightButtonSymbol = null;
-    InputHandler = null;
-}
-
-// Should be inherited from to handle input from the terminal.
-class ::RHTerminal.InputHandler
-{
-    function LeftButtonIn()
+    function _FindAllComponents()
     {
+        local entitySuffixToVariableName =
+        [
+            [ "screen", "_Screen" ],
+            [ "button_left", "_LeftButton" ],
+            [ "button_left_symbol", "_LeftButtonSymbol" ],
+            [ "button_right", "_RightButton" ],
+            [ "button_right_symbol", "_RightButtonSymbol" ]
+        ];
+
+        foreach ( pair in entitySuffixToVariableName )
+        {
+            local entityName = _ComponentPrefix + "-" + pair[0];
+            local propertyName = pair[1];
+
+            local entHandle = Entities.FindByName(null, entityName);
+
+            if ( entHandle == null )
+            {
+                ::Log.DevLog("Terminal " + _TerminalName + ": Could not find entity " + entityName + " for terminal component " + propertyName + "!");
+            }
+
+            ::Log.DevLog("Terminal " + _TerminalName + ": Registering entity " + entityName + " for component " + propertyName + ".");
+            this[propertyName] = entHandle;
+        }
     }
 
-    function LeftButtonOut()
-    {
-    }
+    // Computed entity name prefix. Other components are found
+    // according to this prefix.
+    _ComponentPrefix = null;
 
-    function RightButtonIn()
-    {
-    }
+    // The name of the terminal itself. This is based off the name of the monitor.
+    _TerminalName = ""
 
-    function RightButtonOut()
-    {
-    }
+    // Host entity of the script: the monitor model
+    _Monitor = null;
+
+    // Other components of the terminal:
+    _Screen = null;             // Model for displaying contents on the monitor
+    _LeftButton = null;         // Left brush-based button
+    _LeftButtonSymbol = null;   // Model indicator for this button
+    _RightButton = null;        // Right brush-based button
+    _RightButtonSymbol = null;  // Model indicator for this button
+
+    // Event handler that passes events back to the loader script.
+    _EventHandler = null;
 }
 
 // When this script is loaded for the entity, this line will be called.
-// Self will refer to the entity that loaded the script.
+// Self will refer to the entity that loaded the script (the monitor model).
 ::RHTerminal.StaticTerminalInstance <- ::RHTerminal.TerminalInstance(self)
 
-::RHTerminal.GetStaticTerminalInstance <- function()
+// These functions are invoked by the different components of the terminal.
+function LeftButtonIn()
 {
-    if ( ::RHTerminal.StaticTerminalInstance == null )
+    if ( ::RHTerminal.StaticTerminalInstance )
     {
-        ::Log.DevLog("GetStaticTerminalInstance(): Instance was null!");
+        ::RHTerminal.StaticTerminalInstance.LeftButtonIn();
     }
-
-    return ::RHTerminal.StaticTerminalInstance;
 }
 
-::RHTerminal.SetStaticTerminalInstance <- function(term)
+function LeftButtonOut()
 {
-    ::RHTerminal.StaticTerminalInstance = term;
+    if ( ::RHTerminal.StaticTerminalInstance )
+    {
+        ::RHTerminal.StaticTerminalInstance.LeftButtonOut();
+    }
+}
+
+function RightButtonIn()
+{
+    if ( ::RHTerminal.StaticTerminalInstance )
+    {
+        ::RHTerminal.StaticTerminalInstance.RightButtonIn();
+    }
+}
+
+function RightButtonOut()
+{
+    if ( ::RHTerminal.StaticTerminalInstance )
+    {
+        ::RHTerminal.StaticTerminalInstance.RightButtonOut();
+    }
 }

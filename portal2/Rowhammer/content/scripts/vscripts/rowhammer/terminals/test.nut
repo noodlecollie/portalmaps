@@ -12,42 +12,42 @@ IncludeScript("rowhammer/terminals/common/Defs.nut");
 // monitor, screen contents model, buttons, etc.
 IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
-// Class which manages hooking up all the entities required for the terminal to operate.
-IncludeScript("rowhammer/terminals/common/TerminalEntityRegistrationManager.nut");
-
-// Hooks into the User2 input and causes this to register the relevant entity with the terminal.
-IncludeScript("rowhammer/terminals/common/MapInterface.nut");
-
 printl("*** ROWHAMMER: Calling terminal script test.nut ***");
 printl("Entity using script: " + self.GetName() + " (" + self.GetClassname() + ")");
 
-class InputHandler extends ::RHTerminal.InputHandler
+class EventHandler extends ::RHTerminal.EventHandler
 {
-    function LeftButtonIn()
+    skinNo = 0;
+
+    function LeftButtonIn(terminal)
     {
         ::Log.DevLog("Left button in");
     }
 
-    function LeftButtonOut()
+    function LeftButtonOut(terminal)
     {
-        ::Log.DevLog("Left button out");
+        if ( skinNo > 0 )
+        {
+            skinNo -= 1;
+        }
+
+        ::Log.DevLog("Left button out (skin " + skinNo + ")");
     }
 
-    function RightButtonIn()
+    function RightButtonIn(terminal)
     {
         ::Log.DevLog("Right button in");
     }
 
-    function RightButtonOut()
+    function RightButtonOut(terminal)
     {
-        ::Log.DevLog("Right button out");
+        if ( skinNo < 2 )
+        {
+            skinNo += 1;
+        }
+
+        ::Log.DevLog("Right button out (skin " + skinNo + ")");
     }
 }
 
-// Register all the terminal components.
-::RHTerminal.BeginEntityRegistration()
-
-local instance = ::RHTerminal.GetStaticTerminalInstance()
-
-instance.InputHandler = InputHandler()
-instance.SetMonitorSkin(::RHTerminal.MonitorSkin.ON)
+::RHTerminal.StaticTerminalInstance.SetEventHandler(EventHandler());

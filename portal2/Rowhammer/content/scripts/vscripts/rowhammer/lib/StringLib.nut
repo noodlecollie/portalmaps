@@ -29,4 +29,16 @@ getroottable()["INC_LIB_STRINGLIB"] <- true;
 
         return true;
     }
+
+    function prefixBeforeFirstHyphen(str)
+    {
+        local hyphenIndex = str.find("-")
+
+        if ( hyphenIndex == null )
+        {
+            return str;
+        }
+
+        return str.slice(0, hyphenIndex);
+    }
 }
