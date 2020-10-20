@@ -13,11 +13,17 @@ IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
     SQUARE_FILLED = 0,
     SQUARE_OUTLINE = 1,
     SQUARE_DOT = 2,
-    CIRCLE_FILLES = 3,
+    CIRCLE_FILLED = 3,
     CIRCLE_OUTLINE = 4,
     CIRCLE_DOT = 5,
 
     _COUNT = 6
+};
+
+::RHTerminal.ButtonSymbolAnimation <-
+{
+    SQUARE = [::RHTerminal.ButtonSymbolSkin.SQUARE_OUTLINE, ::RHTerminal.ButtonSymbolSkin.SQUARE_DOT]
+    CIRCLE = [::RHTerminal.ButtonSymbolSkin.CIRCLE_OUTLINE, ::RHTerminal.ButtonSymbolSkin.CIRCLE_DOT]
 };
 
 // Corresponds to skins on the operator models.

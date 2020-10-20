@@ -11,11 +11,19 @@ IncludeScript("rowhammer/lib/Log.nut");
 
 class ::RHTerminal.EventHandler
 {
+    function LeftButtonStartPress(terminal)
+    {
+    }
+
     function LeftButtonIn(terminal)
     {
     }
 
     function LeftButtonOut(terminal)
+    {
+    }
+
+    function RightButtonStartPress(terminal)
     {
     }
 
@@ -50,6 +58,72 @@ class ::RHTerminal.TerminalInstance
         _EventHandler = handler;
     }
 
+    function SetTerminalPowerOn(isOn)
+    {
+        local skinIndex = isOn ? ::RHTerminal.MonitorSkin.ON : ::RHTerminal.MonitorSkin.OFF;
+        local enabledInput = isOn ? "Enable" : "Disable";
+        local unlockedInput = isOn ? "Unlock" : "Lock";
+
+        EntFireByHandle(_Monitor, "Skin", skinIndex.tostring(), 0.0, _Monitor, _Monitor);
+        EntFireByHandle(_Screen, enabledInput, "", 0.0, _Monitor, _Monitor);
+        EntFireByHandle(_LeftButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
+        EntFireByHandle(_RightButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
+        EntFireByHandle(_LeftButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
+        EntFireByHandle(_RightButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
+    }
+
+    function SetScreen(index)
+    {
+        EntFireByHandle(_Screen, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+    }
+
+    function SetLeftButtonSymbol(index)
+    {
+        EntFireByHandle(_LeftButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+    }
+
+    function SetLeftButtonAnimation(anim)
+    {
+        _LeftButtonAnimation = anim;
+
+        if ( _LeftButtonAnimation != null )
+        {
+            SetLeftButtonSymbol(_LeftButtonAnimation[0]);
+        }
+    }
+
+    function SetRightButtonSymbol(index)
+    {
+        EntFireByHandle(_RightButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+    }
+
+    function SetRightButtonAnimation(anim)
+    {
+        _RightButtonAnimation = anim;
+
+        if ( _RightButtonAnimation != null )
+        {
+            SetRightButtonSymbol(_RightButtonAnimation[0]);
+        }
+    }
+
+    /////////////////////////////////////////////////////////////
+    // Event handler functions from terminal components
+    /////////////////////////////////////////////////////////////
+
+    function LeftButtonStartPress()
+    {
+        if ( _LeftButtonAnimation != null )
+        {
+            SetLeftButtonSymbol(_LeftButtonAnimation[1]);
+        }
+
+        if ( _EventHandler != null )
+        {
+            _EventHandler.LeftButtonStartPress(this);
+        }
+    }
+
     function LeftButtonIn()
     {
         if ( _EventHandler != null )
@@ -60,9 +134,27 @@ class ::RHTerminal.TerminalInstance
 
     function LeftButtonOut()
     {
+        if ( _LeftButtonAnimation != null )
+        {
+            SetLeftButtonSymbol(_LeftButtonAnimation[0]);
+        }
+
         if ( _EventHandler != null )
         {
             _EventHandler.LeftButtonOut(this);
+        }
+    }
+
+    function RightButtonStartPress()
+    {
+        if ( _RightButtonAnimation != null )
+        {
+            SetRightButtonSymbol(_RightButtonAnimation[1]);
+        }
+
+        if ( _EventHandler != null )
+        {
+            _EventHandler.RightButtonStartPress(this);
         }
     }
 
@@ -76,6 +168,11 @@ class ::RHTerminal.TerminalInstance
 
     function RightButtonOut()
     {
+        if ( _RightButtonAnimation != null )
+        {
+            SetRightButtonSymbol(_RightButtonAnimation[0]);
+        }
+
         if ( _EventHandler != null )
         {
             _EventHandler.RightButtonOut(this);
@@ -129,6 +226,10 @@ class ::RHTerminal.TerminalInstance
 
     // Event handler that passes events back to the loader script.
     _EventHandler = null;
+
+    // Other properties:
+    _LeftButtonAnimation = null;
+    _RightButtonAnimation = null;
 }
 
 // When this script is loaded for the entity, this line will be called.
@@ -136,6 +237,14 @@ class ::RHTerminal.TerminalInstance
 ::RHTerminal.StaticTerminalInstance <- ::RHTerminal.TerminalInstance(self)
 
 // These functions are invoked by the different components of the terminal.
+function LeftButtonStartPress()
+{
+    if ( ::RHTerminal.StaticTerminalInstance )
+    {
+        ::RHTerminal.StaticTerminalInstance.LeftButtonStartPress();
+    }
+}
+
 function LeftButtonIn()
 {
     if ( ::RHTerminal.StaticTerminalInstance )
@@ -149,6 +258,14 @@ function LeftButtonOut()
     if ( ::RHTerminal.StaticTerminalInstance )
     {
         ::RHTerminal.StaticTerminalInstance.LeftButtonOut();
+    }
+}
+
+function RightButtonStartPress()
+{
+    if ( ::RHTerminal.StaticTerminalInstance )
+    {
+        ::RHTerminal.StaticTerminalInstance.RightButtonStartPress();
     }
 }
 

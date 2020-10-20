@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "63"
+	"mapversion" "77"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,33 +20,13 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "63"
+	"mapversion" "77"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
 	"maxblobcount" "250"
 	"maxpropscreenwidth" "-1"
 	"skyname" "sky_black_nofog"
-}
-entity
-{
-	"id" "622"
-	"classname" "math_counter"
-	"targetname" "monitor_skin"
-	connections
-	{
-		"OnUser2" "monitor_modelFireUser20-1"
-		"OutValue" "monitor_modelSkin0-1"
-		"OnGetValue" "monitor_modelSkin0-1"
-	}
-	"origin" "0 8 40"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
 }
 entity
 {
@@ -77,15 +57,6 @@ entity
 	"StartDisabled" "0"
 	"SuppressAnimSounds" "0"
 	"targetname" "monitor_model"
-	connections
-	{
-		"OnUser1" "button_leftFireUser20-1"
-		"OnUser1" "button_rightFireUser20-1"
-		"OnUser1" "button_left_symbolFireUser20-1"
-		"OnUser1" "screenFireUser20-1"
-		"OnUser1" "button_right_symbolFireUser20-1"
-		"OnUser1" "monitor_skinFireUser20-1"
-	}
 	"origin" "0 0 0"
 	editor
 	{
@@ -114,10 +85,6 @@ entity
 	"solid" "6"
 	"StartDisabled" "1"
 	"targetname" "button_left_symbol"
-	connections
-	{
-		"OnUser2" "monitor_modelFireUser20-1"
-	}
 	"origin" "-1 -21 -9"
 	editor
 	{
@@ -143,7 +110,7 @@ entity
 	"renderfx" "0"
 	"rendermode" "0"
 	"sounds" "0"
-	"spawnflags" "1024"
+	"spawnflags" "3072"
 	"speed" "10"
 	"targetname" "button_left"
 	"unlocked_sentence" "0"
@@ -153,7 +120,7 @@ entity
 	{
 		"OnIn" "monitor_modelRunScriptCodeLeftButtonIn()0-1"
 		"OnOut" "monitor_modelRunScriptCodeLeftButtonOut()0-1"
-		"OnUser2" "monitor_modelFireUser20-1"
+		"OnPressed" "monitor_modelRunScriptCodeLeftButtonStartPress()0-1"
 	}
 	solid
 	{
@@ -257,10 +224,6 @@ entity
 	"solid" "6"
 	"StartDisabled" "1"
 	"targetname" "button_right_symbol"
-	connections
-	{
-		"OnUser2" "monitor_modelFireUser20-1"
-	}
 	"origin" "-1 18 -9"
 	editor
 	{
@@ -286,7 +249,7 @@ entity
 	"renderfx" "0"
 	"rendermode" "0"
 	"sounds" "0"
-	"spawnflags" "1024"
+	"spawnflags" "3072"
 	"speed" "10"
 	"targetname" "button_right"
 	"unlocked_sentence" "0"
@@ -296,7 +259,7 @@ entity
 	{
 		"OnIn" "monitor_modelRunScriptCodeRightButtonIn()0-1"
 		"OnOut" "monitor_modelRunScriptCodeRightButtonOut()0-1"
-		"OnUser2" "monitor_modelFireUser20-1"
+		"OnPressed" "monitor_modelRunScriptCodeRightButtonStartPress()0-1"
 	}
 	solid
 	{
@@ -388,6 +351,7 @@ entity
 	"classname" "func_instance_parms"
 	"parm1" "$screen_colour color255 255 255 255"
 	"parm2" "$screen_script string"
+	"parm3" "$screen_model string models/rowhammer/terminal_sc"
 	"origin" "0 -8 24"
 	editor
 	{
@@ -444,17 +408,13 @@ entity
 	"fadescale" "1"
 	"MaxAnimTime" "10"
 	"MinAnimTime" "5"
-	"model" "models/rowhammer/terminal_screen_base.mdl"
+	"model" "$screen_model"
 	"renderamt" "255"
 	"rendercolor" "$screen_colour"
 	"skin" "0"
 	"solid" "6"
 	"StartDisabled" "1"
 	"targetname" "screen"
-	connections
-	{
-		"OnUser2" "monitor_modelFireUser20-1"
-	}
 	"origin" "0 0 0"
 	editor
 	{

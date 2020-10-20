@@ -19,6 +19,11 @@ class EventHandler extends ::RHTerminal.EventHandler
 {
     skinNo = 0;
 
+    function LeftButtonStartPress(terminal)
+    {
+        ::Log.DevLog("Left button start press");
+    }
+
     function LeftButtonIn(terminal)
     {
         ::Log.DevLog("Left button in");
@@ -32,6 +37,12 @@ class EventHandler extends ::RHTerminal.EventHandler
         }
 
         ::Log.DevLog("Left button out (skin " + skinNo + ")");
+        terminal.SetScreen(skinNo);
+    }
+
+    function RightButtonStartPress(terminal)
+    {
+        ::Log.DevLog("Right button start press");
     }
 
     function RightButtonIn(terminal)
@@ -47,7 +58,13 @@ class EventHandler extends ::RHTerminal.EventHandler
         }
 
         ::Log.DevLog("Right button out (skin " + skinNo + ")");
+        terminal.SetScreen(skinNo);
     }
 }
 
-::RHTerminal.StaticTerminalInstance.SetEventHandler(EventHandler());
+local inst = ::RHTerminal.StaticTerminalInstance;
+
+inst.SetEventHandler(EventHandler());
+inst.SetLeftButtonAnimation(::RHTerminal.ButtonSymbolAnimation.SQUARE);
+inst.SetRightButtonAnimation(::RHTerminal.ButtonSymbolAnimation.CIRCLE);
+inst.SetTerminalPowerOn(true);

@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "178"
+	"mapversion" "192"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "178"
+	"mapversion" "192"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1939,6 +1939,7 @@ entity
 	"file" "instances/rowhammer/terminals/test.vmf"
 	"replace01" "$screen_colour 243 118 86"
 	"replace02" "$screen_script rowhammer/terminals/test.nut"
+	"replace03" "$screen_model models/rowhammer/terminal_screen_base.mdl"
 	"targetname" "terminal_test1"
 	"origin" "64 488 64"
 	editor
@@ -5116,8 +5117,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[40.4262 397.474 102.254]"
-		"look" "[156.909 712.175 0.941322]"
+		"position" "[50.3506 455.727 74.4759]"
+		"look" "[144.066 767.875 -54.5607]"
 	}
 }
 cordons
