@@ -1,6 +1,6 @@
 UnlitGeneric
 {
-	$basetexture "rowhammer/terminal_screens/exception_trap/1"
+	$basetexture "models/rowhammer/terminal_screen_base/terminal_screen_empty"
 	$alphatest 1
 	$alphatestreference 0.5
 	$allowalphatocoverage 1

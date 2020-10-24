@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8419"
-	"mapversion" "192"
+	"mapversion" "193"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "192"
+	"mapversion" "193"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1948,24 +1948,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
-	}
-}
-entity
-{
-	"id" "2610"
-	"classname" "logic_auto"
-	"spawnflags" "1"
-	connections
-	{
-		"OnMapSpawn" "terminal_test1instance:init;Trigger0-1"
-	}
-	"origin" "107.205 503 73.2859"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1000]"
 	}
 }
 entity
@@ -5117,8 +5099,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[50.3506 455.727 74.4759]"
-		"look" "[144.066 767.875 -54.5607]"
+		"position" "[116.391 419.733 122.975]"
+		"look" "[34.973 709.606 -56.5092]"
 	}
 }
 cordons

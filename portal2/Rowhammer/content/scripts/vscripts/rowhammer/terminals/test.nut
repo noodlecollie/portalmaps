@@ -1,6 +1,6 @@
 if ( getroottable().rawin("INC_TERMINALS_TEST") )
 {
-    return;
+	return;
 }
 
 getroottable()["INC_TERMINALS_TEST"] <- true;
@@ -17,49 +17,49 @@ printl("Entity using script: " + self.GetName() + " (" + self.GetClassname() + "
 
 class EventHandler extends ::RHTerminal.EventHandler
 {
-    skinNo = 0;
+	skinNo = 0;
 
-    function LeftButtonStartPress(terminal)
-    {
-        ::Log.DevLog("Left button start press");
-    }
+	function LeftButtonStartPress(terminal)
+	{
+		::Log.DevLog("Left button start press");
+	}
 
-    function LeftButtonIn(terminal)
-    {
-        ::Log.DevLog("Left button in");
-    }
+	function LeftButtonIn(terminal)
+	{
+		::Log.DevLog("Left button in");
+	}
 
-    function LeftButtonOut(terminal)
-    {
-        if ( skinNo > 0 )
-        {
-            skinNo -= 1;
-        }
+	function LeftButtonOut(terminal)
+	{
+		if ( skinNo > 0 )
+		{
+			skinNo -= 1;
+		}
 
-        ::Log.DevLog("Left button out (skin " + skinNo + ")");
-        terminal.SetScreen(skinNo);
-    }
+		::Log.DevLog("Left button out (skin " + skinNo + ")");
+		terminal.SetScreen(skinNo);
+	}
 
-    function RightButtonStartPress(terminal)
-    {
-        ::Log.DevLog("Right button start press");
-    }
+	function RightButtonStartPress(terminal)
+	{
+		::Log.DevLog("Right button start press");
+	}
 
-    function RightButtonIn(terminal)
-    {
-        ::Log.DevLog("Right button in");
-    }
+	function RightButtonIn(terminal)
+	{
+		::Log.DevLog("Right button in");
+	}
 
-    function RightButtonOut(terminal)
-    {
-        if ( skinNo < 2 )
-        {
-            skinNo += 1;
-        }
+	function RightButtonOut(terminal)
+	{
+		if ( skinNo < 2 )
+		{
+			skinNo += 1;
+		}
 
-        ::Log.DevLog("Right button out (skin " + skinNo + ")");
-        terminal.SetScreen(skinNo);
-    }
+		::Log.DevLog("Right button out (skin " + skinNo + ")");
+		terminal.SetScreen(skinNo);
+	}
 }
 
 local inst = ::RHTerminal.StaticTerminalInstance;

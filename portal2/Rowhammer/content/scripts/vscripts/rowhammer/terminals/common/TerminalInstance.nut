@@ -1,6 +1,6 @@
 if ( getroottable().rawin("INC_TERMINALS_COMMON_TERMINALINSTANCE") )
 {
-    return;
+	return;
 }
 
 getroottable()["INC_TERMINALS_COMMON_TERMINALINSTANCE"] <- true;
@@ -11,225 +11,235 @@ IncludeScript("rowhammer/lib/Log.nut");
 
 class ::RHTerminal.EventHandler
 {
-    function LeftButtonStartPress(terminal)
-    {
-    }
+	function LeftButtonStartPress(terminal)
+	{
+	}
 
-    function LeftButtonIn(terminal)
-    {
-    }
+	function LeftButtonIn(terminal)
+	{
+	}
 
-    function LeftButtonOut(terminal)
-    {
-    }
+	function LeftButtonOut(terminal)
+	{
+	}
 
-    function RightButtonStartPress(terminal)
-    {
-    }
+	function RightButtonStartPress(terminal)
+	{
+	}
 
-    function RightButtonIn(terminal)
-    {
-    }
+	function RightButtonIn(terminal)
+	{
+	}
 
-    function RightButtonOut(terminal)
-    {
-    }
+	function RightButtonOut(terminal)
+	{
+	}
 }
 
 class ::RHTerminal.TerminalInstance
 {
-    constructor(monitor)
-    {
-        _Monitor = monitor;
-        _TerminalName = _Monitor.GetName();
-        _ComponentPrefix = ::StringLib.prefixBeforeFirstHyphen(_TerminalName);
+	constructor(monitor)
+	{
+		_Monitor = monitor;
+		_TerminalName = _Monitor.GetName();
+		_ComponentPrefix = ::StringLib.prefixBeforeFirstHyphen(_TerminalName);
 
-        _FindAllComponents();
-    }
+		_FindAllComponents();
+	}
 
-    function SetEventHandler(handler)
-    {
-        if ( !(handler instanceof ::RHTerminal.EventHandler) )
-        {
-            ::Log.DevLog("Terminal " + _TerminalName + ": Could not set event handler that does not derive from EventHandler class!");
-            return;
-        }
+	function SetEventHandler(handler)
+	{
+		if ( !(handler instanceof ::RHTerminal.EventHandler) )
+		{
+			::Log.DevLog("Terminal " + _TerminalName + ": Could not set event handler that does not derive from EventHandler class!");
+			return;
+		}
 
-        _EventHandler = handler;
-    }
+		_EventHandler = handler;
+	}
 
-    function SetTerminalPowerOn(isOn)
-    {
-        local skinIndex = isOn ? ::RHTerminal.MonitorSkin.ON : ::RHTerminal.MonitorSkin.OFF;
-        local enabledInput = isOn ? "Enable" : "Disable";
-        local unlockedInput = isOn ? "Unlock" : "Lock";
+	function SetTerminalPowerOn(isOn)
+	{
+		local skinIndex = isOn ? ::RHTerminal.MonitorSkin.ON : ::RHTerminal.MonitorSkin.OFF;
+		local enabledInput = isOn ? "Enable" : "Disable";
+		local unlockedInput = isOn ? "Unlock" : "Lock";
 
-        EntFireByHandle(_Monitor, "Skin", skinIndex.tostring(), 0.0, _Monitor, _Monitor);
-        EntFireByHandle(_Screen, enabledInput, "", 0.0, _Monitor, _Monitor);
-        EntFireByHandle(_LeftButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
-        EntFireByHandle(_RightButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
-        EntFireByHandle(_LeftButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
-        EntFireByHandle(_RightButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
-    }
+		if ( !isOn && _EventHandler != null )
+		{
+			_EventHandler.PowerOff(this);
+		}
 
-    function SetScreen(index)
-    {
-        EntFireByHandle(_Screen, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
-    }
+		EntFireByHandle(_Monitor, "Skin", skinIndex.tostring(), 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_Screen, enabledInput, "", 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_LeftButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_RightButtonSymbol, enabledInput, "", 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_LeftButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_RightButton, unlockedInput, "", 0.0, _Monitor, _Monitor);
 
-    function SetLeftButtonSymbol(index)
-    {
-        EntFireByHandle(_LeftButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
-    }
+		if ( isOn && _EventHandler != null )
+		{
+			_EventHandler.PowerOn(this);
+		}
+	}
 
-    function SetLeftButtonAnimation(anim)
-    {
-        _LeftButtonAnimation = anim;
+	function SetScreen(index)
+	{
+		EntFireByHandle(_Screen, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+	}
 
-        if ( _LeftButtonAnimation != null )
-        {
-            SetLeftButtonSymbol(_LeftButtonAnimation[0]);
-        }
-    }
+	function SetLeftButtonSymbol(index)
+	{
+		EntFireByHandle(_LeftButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+	}
 
-    function SetRightButtonSymbol(index)
-    {
-        EntFireByHandle(_RightButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
-    }
+	function SetLeftButtonAnimation(anim)
+	{
+		_LeftButtonAnimation = anim;
 
-    function SetRightButtonAnimation(anim)
-    {
-        _RightButtonAnimation = anim;
+		if ( _LeftButtonAnimation != null )
+		{
+			SetLeftButtonSymbol(_LeftButtonAnimation[0]);
+		}
+	}
 
-        if ( _RightButtonAnimation != null )
-        {
-            SetRightButtonSymbol(_RightButtonAnimation[0]);
-        }
-    }
+	function SetRightButtonSymbol(index)
+	{
+		EntFireByHandle(_RightButtonSymbol, "Skin", index.tostring(), 0.0, _Monitor, _Monitor);
+	}
 
-    /////////////////////////////////////////////////////////////
-    // Event handler functions from terminal components
-    /////////////////////////////////////////////////////////////
+	function SetRightButtonAnimation(anim)
+	{
+		_RightButtonAnimation = anim;
 
-    function LeftButtonStartPress()
-    {
-        if ( _LeftButtonAnimation != null )
-        {
-            SetLeftButtonSymbol(_LeftButtonAnimation[1]);
-        }
+		if ( _RightButtonAnimation != null )
+		{
+			SetRightButtonSymbol(_RightButtonAnimation[0]);
+		}
+	}
 
-        if ( _EventHandler != null )
-        {
-            _EventHandler.LeftButtonStartPress(this);
-        }
-    }
+	/////////////////////////////////////////////////////////////
+	// Event handler functions from terminal components
+	/////////////////////////////////////////////////////////////
 
-    function LeftButtonIn()
-    {
-        if ( _EventHandler != null )
-        {
-            _EventHandler.LeftButtonIn(this);
-        }
-    }
+	function LeftButtonStartPress()
+	{
+		if ( _LeftButtonAnimation != null )
+		{
+			SetLeftButtonSymbol(_LeftButtonAnimation[1]);
+		}
 
-    function LeftButtonOut()
-    {
-        if ( _LeftButtonAnimation != null )
-        {
-            SetLeftButtonSymbol(_LeftButtonAnimation[0]);
-        }
+		if ( _EventHandler != null )
+		{
+			_EventHandler.LeftButtonStartPress(this);
+		}
+	}
 
-        if ( _EventHandler != null )
-        {
-            _EventHandler.LeftButtonOut(this);
-        }
-    }
+	function LeftButtonIn()
+	{
+		if ( _EventHandler != null )
+		{
+			_EventHandler.LeftButtonIn(this);
+		}
+	}
 
-    function RightButtonStartPress()
-    {
-        if ( _RightButtonAnimation != null )
-        {
-            SetRightButtonSymbol(_RightButtonAnimation[1]);
-        }
+	function LeftButtonOut()
+	{
+		if ( _LeftButtonAnimation != null )
+		{
+			SetLeftButtonSymbol(_LeftButtonAnimation[0]);
+		}
 
-        if ( _EventHandler != null )
-        {
-            _EventHandler.RightButtonStartPress(this);
-        }
-    }
+		if ( _EventHandler != null )
+		{
+			_EventHandler.LeftButtonOut(this);
+		}
+	}
 
-    function RightButtonIn()
-    {
-        if ( _EventHandler != null )
-        {
-            _EventHandler.RightButtonIn(this);
-        }
-    }
+	function RightButtonStartPress()
+	{
+		if ( _RightButtonAnimation != null )
+		{
+			SetRightButtonSymbol(_RightButtonAnimation[1]);
+		}
 
-    function RightButtonOut()
-    {
-        if ( _RightButtonAnimation != null )
-        {
-            SetRightButtonSymbol(_RightButtonAnimation[0]);
-        }
+		if ( _EventHandler != null )
+		{
+			_EventHandler.RightButtonStartPress(this);
+		}
+	}
 
-        if ( _EventHandler != null )
-        {
-            _EventHandler.RightButtonOut(this);
-        }
-    }
+	function RightButtonIn()
+	{
+		if ( _EventHandler != null )
+		{
+			_EventHandler.RightButtonIn(this);
+		}
+	}
 
-    function _FindAllComponents()
-    {
-        local entitySuffixToVariableName =
-        [
-            [ "screen", "_Screen" ],
-            [ "button_left", "_LeftButton" ],
-            [ "button_left_symbol", "_LeftButtonSymbol" ],
-            [ "button_right", "_RightButton" ],
-            [ "button_right_symbol", "_RightButtonSymbol" ]
-        ];
+	function RightButtonOut()
+	{
+		if ( _RightButtonAnimation != null )
+		{
+			SetRightButtonSymbol(_RightButtonAnimation[0]);
+		}
 
-        foreach ( pair in entitySuffixToVariableName )
-        {
-            local entityName = _ComponentPrefix + "-" + pair[0];
-            local propertyName = pair[1];
+		if ( _EventHandler != null )
+		{
+			_EventHandler.RightButtonOut(this);
+		}
+	}
 
-            local entHandle = Entities.FindByName(null, entityName);
+	function _FindAllComponents()
+	{
+		local entitySuffixToVariableName =
+		[
+			[ "screen", "_Screen" ],
+			[ "button_left", "_LeftButton" ],
+			[ "button_left_symbol", "_LeftButtonSymbol" ],
+			[ "button_right", "_RightButton" ],
+			[ "button_right_symbol", "_RightButtonSymbol" ]
+		];
 
-            if ( entHandle == null )
-            {
-                ::Log.DevLog("Terminal " + _TerminalName + ": Could not find entity " + entityName + " for terminal component " + propertyName + "!");
-            }
+		foreach ( pair in entitySuffixToVariableName )
+		{
+			local entityName = _ComponentPrefix + "-" + pair[0];
+			local propertyName = pair[1];
 
-            ::Log.DevLog("Terminal " + _TerminalName + ": Registering entity " + entityName + " for component " + propertyName + ".");
-            this[propertyName] = entHandle;
-        }
-    }
+			local entHandle = Entities.FindByName(null, entityName);
 
-    // Computed entity name prefix. Other components are found
-    // according to this prefix.
-    _ComponentPrefix = null;
+			if ( entHandle == null )
+			{
+				::Log.DevLog("Terminal " + _TerminalName + ": Could not find entity " + entityName + " for terminal component " + propertyName + "!");
+			}
 
-    // The name of the terminal itself. This is based off the name of the monitor.
-    _TerminalName = ""
+			::Log.DevLog("Terminal " + _TerminalName + ": Registering entity " + entityName + " for component " + propertyName + ".");
+			this[propertyName] = entHandle;
+		}
+	}
 
-    // Host entity of the script: the monitor model
-    _Monitor = null;
+	// Computed entity name prefix. Other components are found
+	// according to this prefix.
+	_ComponentPrefix = null;
 
-    // Other components of the terminal:
-    _Screen = null;             // Model for displaying contents on the monitor
-    _LeftButton = null;         // Left brush-based button
-    _LeftButtonSymbol = null;   // Model indicator for this button
-    _RightButton = null;        // Right brush-based button
-    _RightButtonSymbol = null;  // Model indicator for this button
+	// The name of the terminal itself. This is based off the name of the monitor.
+	_TerminalName = ""
 
-    // Event handler that passes events back to the loader script.
-    _EventHandler = null;
+	// Host entity of the script: the monitor model
+	_Monitor = null;
 
-    // Other properties:
-    _LeftButtonAnimation = null;
-    _RightButtonAnimation = null;
+	// Other components of the terminal:
+	_Screen = null;             // Model for displaying contents on the monitor
+	_LeftButton = null;         // Left brush-based button
+	_LeftButtonSymbol = null;   // Model indicator for this button
+	_RightButton = null;        // Right brush-based button
+	_RightButtonSymbol = null;  // Model indicator for this button
+
+	// Event handler that passes events back to the loader script.
+	_EventHandler = null;
+
+	// Other properties:
+	_LeftButtonAnimation = null;
+	_RightButtonAnimation = null;
 }
 
 // When this script is loaded for the entity, this line will be called.
@@ -239,48 +249,48 @@ class ::RHTerminal.TerminalInstance
 // These functions are invoked by the different components of the terminal.
 function LeftButtonStartPress()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.LeftButtonStartPress();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.LeftButtonStartPress();
+	}
 }
 
 function LeftButtonIn()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.LeftButtonIn();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.LeftButtonIn();
+	}
 }
 
 function LeftButtonOut()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.LeftButtonOut();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.LeftButtonOut();
+	}
 }
 
 function RightButtonStartPress()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.RightButtonStartPress();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.RightButtonStartPress();
+	}
 }
 
 function RightButtonIn()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.RightButtonIn();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.RightButtonIn();
+	}
 }
 
 function RightButtonOut()
 {
-    if ( ::RHTerminal.StaticTerminalInstance )
-    {
-        ::RHTerminal.StaticTerminalInstance.RightButtonOut();
-    }
+	if ( ::RHTerminal.StaticTerminalInstance )
+	{
+		::RHTerminal.StaticTerminalInstance.RightButtonOut();
+	}
 }

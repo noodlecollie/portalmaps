@@ -2,7 +2,7 @@ $modelname "rowhammer/terminal_screen_exception_trap.mdl"
 
 $bodygroup "default"
 {
-	studio "terminal_screen_base.smd"
+	studio "base/terminal_screen_base.smd"
 }
 
 $surfaceprop "glass"
@@ -15,9 +15,10 @@ $cdmaterials "models/rowhammer/terminal_screens/exception_trap"
 
 $texturegroup "skinfamilies"
 {
-	{ "1" }
-	{ "2" }
-	{ "3" }
+	{ "terminal_screen_empty" }
+	{ "screen1" }
+	{ "screen2" }
+	{ "screen3" }
 }
 
 $cbox 0 0 0 0 0 0
@@ -26,4 +27,4 @@ $bbox -4 -22.8 -11.45 0 22.8 11.45
 
 $definebone "root" "" 0 0 0 0 0 0 0 0 0 0 0 0
 
-$sequence "BindPose" "terminal_screen_base"
+$sequence "BindPose" "base/terminal_screen_base"

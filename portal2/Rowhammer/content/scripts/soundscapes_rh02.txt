@@ -1,0 +1,4 @@
+"rowhammer.silent"
+{
+	"dsp" "1"
+}
