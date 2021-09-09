@@ -1,0 +1,175 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "8973"
+	"mapversion" "1"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "4"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "1"
+	"classname" "worldspawn"
+	"skyname" "sky_black_nofog"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+	"maxblobcount" "250"
+}
+entity
+{
+	"id" "2"
+	"classname" "light_spot"
+	"_cone" "80"
+	"_exponent" "1"
+	"_inner_cone" "0"
+	"_light" "255 226 187 10"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0.5"
+	"_quadratic_attn" "0.3"
+	"angles" "0 180 -180"
+	"pitch" "0"
+	"origin" "-6 -32 3.99997"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "7"
+	"classname" "light_spot"
+	"_cone" "80"
+	"_exponent" "1"
+	"_inner_cone" "0"
+	"_light" "255 226 187 10"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0.5"
+	"_quadratic_attn" "0.3"
+	"angles" "0 180 180"
+	"pitch" "0"
+	"origin" "-6 -16 3.99997"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "12"
+	"classname" "light_spot"
+	"_cone" "80"
+	"_exponent" "1"
+	"_inner_cone" "0"
+	"_light" "255 226 187 10"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0.5"
+	"_quadratic_attn" "0.3"
+	"angles" "0 180 -180"
+	"pitch" "0"
+	"origin" "-6 0 3.99997"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "17"
+	"classname" "light_spot"
+	"_cone" "80"
+	"_exponent" "1"
+	"_inner_cone" "0"
+	"_light" "255 226 187 10"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0.5"
+	"_quadratic_attn" "0.3"
+	"angles" "0 180 180"
+	"pitch" "0"
+	"origin" "-6 16 3.99997"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "22"
+	"classname" "light_spot"
+	"_cone" "80"
+	"_exponent" "1"
+	"_inner_cone" "0"
+	"_light" "255 226 187 10"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0.5"
+	"_quadratic_attn" "0.3"
+	"angles" "0 180 180"
+	"pitch" "0"
+	"origin" "-6 32 3.99997"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "27"
+	"classname" "prop_static"
+	"angles" "90 180 0"
+	"disableshadows" "1"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"model" "models/props_lights/under_neonlamp.mdl"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"skin" "0"
+	"solid" "6"
+	"origin" "0 0 4"
+	editor
+	{
+		"color" "255 255 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 500]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordons
+{
+	"active" "0"
+}
