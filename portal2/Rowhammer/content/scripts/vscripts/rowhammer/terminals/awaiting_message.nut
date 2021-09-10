@@ -10,10 +10,10 @@ IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
 ::Screens <-
 {
-	EMPTY = 0,
-	AWAITING_MESSAGE = 1,
-	POWER_WARNING_THIRTY_PERCENT = 2,
-	POWER_WARNING_TWENTY_NINE_PERCENT = 3,
+	POWER_WARNING_THIRTY_PERCENT = 0,
+	POWER_WARNING_TWENTY_NINE_PERCENT = 1,
+	MESSAGE_HOME_SCREEN = 2,
+	MESSAGE_INFO = 3,
 	DISPLAY_MESSAGE = 4,
 	DISPLAY_MESSAGE_SOURCE = 5,
 	TRANSPORTING = 6
@@ -21,7 +21,7 @@ IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
 class EventHandler extends ::RHTerminal.EventHandler
 {
-	currentScreen = ::Screens.AWAITING_MESSAGE;
+	currentScreen = ::Screens.MESSAGE_HOME_SCREEN;
 
 	function PowerOn(terminal)
 	{
@@ -52,9 +52,9 @@ class EventHandler extends ::RHTerminal.EventHandler
 		{
 			currentScreen = ::Screens.EXIT;
 			EntFire("release_relay", "Trigger", "", 0.0, terminal);
-		}
+		}*/
 
-		terminal.SetScreen(currentScreen);*/
+		terminal.SetScreen(currentScreen);
 	}
 
 	function RightButtonStartPress(terminal)
@@ -70,9 +70,9 @@ class EventHandler extends ::RHTerminal.EventHandler
 		/*if ( currentScreen == ::Screens.MAIN )
 		{
 			currentScreen = ::Screens.ESCALATE;
-		}
+		}*/
 
-		terminal.SetScreen(currentScreen);*/
+		terminal.SetScreen(currentScreen);
 	}
 }
 
