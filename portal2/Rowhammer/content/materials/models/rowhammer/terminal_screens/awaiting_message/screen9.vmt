@@ -1,6 +1,6 @@
 UnlitGeneric
 {
-	$basetexture "models/rowhammer/terminal_screens/awaiting_message/screen6"
+	$basetexture "models/rowhammer/terminal_screens/awaiting_message/screen9"
 	$alphatest 1
 	$alphatestreference 0.5
 	$allowalphatocoverage 1

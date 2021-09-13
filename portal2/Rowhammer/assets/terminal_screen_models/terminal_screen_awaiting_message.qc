@@ -24,6 +24,7 @@ $texturegroup "skinfamilies"
 	{ "screen6" }
 	{ "screen7" }
 	{ "screen8" }
+	{ "screen9" }
 }
 
 $cbox 0 0 0 0 0 0
