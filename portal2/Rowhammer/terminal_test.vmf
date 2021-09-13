@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8419"
-	"mapversion" "193"
+	"editorbuild" "8973"
+	"mapversion" "197"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "193"
+	"mapversion" "197"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1246,6 +1246,31 @@ world
 }
 entity
 {
+	"id" "2626"
+	"classname" "func_instance"
+	"$screen_colour" "243 118 86"
+	"$screen_init_func" "???"
+	"$screen_model" "models/rowhammer/terminal_screen_base.mdl"
+	"$screen_script" "rowhammer/terminals/test.nut"
+	"angles" "-0 180 0"
+	"file" "instances/rowhammer/terminals/test.vmf"
+	"fixup_style" "0"
+	"replace01" "$screen_colour 243 118 86"
+	"replace02" "$screen_script rowhammer/terminals/awaiting_message.nut"
+	"replace03" "$screen_model models/rowhammer/terminal_screen_awaiting_message.mdl"
+	"replace04" "$screen_init_func PowerOn()"
+	"targetname" "maint_room_terminal"
+	"origin" "168 384 64"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
 	"id" "1651"
 	"classname" "prop_dynamic"
 	"angles" "0 0 0"
@@ -1940,6 +1965,7 @@ entity
 	"replace01" "$screen_colour 243 118 86"
 	"replace02" "$screen_script rowhammer/terminals/test.nut"
 	"replace03" "$screen_model models/rowhammer/terminal_screen_base.mdl"
+	"replace04" "$screen_init_func ???"
 	"targetname" "terminal_test1"
 	"origin" "64 488 64"
 	editor
@@ -5099,8 +5125,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[116.391 419.733 122.975]"
-		"look" "[34.973 709.606 -56.5092]"
+		"position" "[50.1385 429.365 86.1861]"
+		"look" "[114.83 771.362 44.6836]"
 	}
 }
 cordons

@@ -1,22 +1,23 @@
-if ( getroottable().rawin("INC_TERMINALS_AWAITING_MESSAGE") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_AWAITING_MESSAGE") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_AWAITING_MESSAGE"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_AWAITING_MESSAGE"] <- true;
 
 IncludeScript("rowhammer/terminals/common/Defs.nut");
 IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
 ::Screens <-
 {
-	POWER_WARNING_THIRTY_PERCENT = 0,
-	POWER_WARNING_TWENTY_NINE_PERCENT = 1,
-	MESSAGE_HOME_SCREEN = 2,
-	MESSAGE_INFO = 3,
-	DISPLAY_MESSAGE = 4,
-	DISPLAY_MESSAGE_SOURCE = 5,
-	TRANSPORTING = 6
+	EMPTY = 0,
+	POWER_WARNING_THIRTY_PERCENT = 1,
+	POWER_WARNING_TWENTY_NINE_PERCENT = 2,
+	MESSAGE_HOME_SCREEN = 3,
+	MESSAGE_INFO = 4,
+	DISPLAY_MESSAGE = 5,
+	DISPLAY_MESSAGE_SOURCE = 6,
+	TRANSPORTING = 7
 };
 
 class EventHandler extends ::RHTerminal.EventHandler
@@ -76,7 +77,7 @@ class EventHandler extends ::RHTerminal.EventHandler
 	}
 }
 
-local inst = ::RHTerminal.StaticTerminalInstance;
+local inst = ::RHTerminal.CreateAndRegisterInstance(self);
 
 inst.SetEventHandler(EventHandler());
 inst.SetLeftButtonAnimation(::RHTerminal.ButtonSymbolAnimation.CIRCLE);
@@ -84,5 +85,5 @@ inst.SetRightButtonAnimation(::RHTerminal.ButtonSymbolAnimation.CIRCLE);
 
 function PowerOn()
 {
-	::RHTerminal.StaticTerminalInstance.SetTerminalPowerOn(true);
+	::RHTerminal.GetInstance(self).SetTerminalPowerOn(true);
 }

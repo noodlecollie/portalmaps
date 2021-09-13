@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_TERMINALS_COMMON_TERMINALINSTANCE") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_COMMON_TERMINALINSTANCE") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_COMMON_TERMINALINSTANCE"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_COMMON_TERMINALINSTANCE"] <- true;
 
 IncludeScript("rowhammer/terminals/common/Defs.nut");
 IncludeScript("rowhammer/lib/StringLib.nut");
@@ -242,55 +242,84 @@ class ::RHTerminal.TerminalInstance
 	_RightButtonAnimation = null;
 }
 
-// When this script is loaded for the entity, this line will be called.
-// Self will refer to the entity that loaded the script (the monitor model).
-::RHTerminal.StaticTerminalInstance <- ::RHTerminal.TerminalInstance(self)
+// OK, something a bit weird is going on here.
+// If you set ::RHTerminal.StaticTerminalInstance, this variable
+// isn't visible from other entities. However, if you set it to {},
+// this appears to *override* the variable as seen from other entities.
+// I have no idea why this is happening, so we just set the static
+// instance table in the root table instead.
+if ( !getroottable().rawin("STATIC_TERMINALS") )
+{
+	getroottable()["STATIC_TERMINALS"] <- {};
+}
+
+::RHTerminal.CreateAndRegisterInstance <- function(outer)
+{
+	::Log.DevLog("Creating and registering terminal instance for \"" + outer.GetName() + "\"");
+
+	getroottable()["STATIC_TERMINALS"][outer.GetName()] <- ::RHTerminal.TerminalInstance(outer);
+
+	// Remove me
+	printl("Table has " + getroottable()["STATIC_TERMINALS"].len() + " entries");
+
+	return getroottable()["STATIC_TERMINALS"][outer.GetName()];
+}
+
+::RHTerminal.GetInstance <- function(outer)
+{
+	if ( outer.GetName() in getroottable()["STATIC_TERMINALS"] )
+	{
+		return getroottable()["STATIC_TERMINALS"][outer.GetName()];
+	}
+
+	return null;
+}
 
 // These functions are invoked by the different components of the terminal.
 function LeftButtonStartPress()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.LeftButtonStartPress();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].LeftButtonStartPress();
 	}
 }
 
 function LeftButtonIn()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.LeftButtonIn();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].LeftButtonIn();
 	}
 }
 
 function LeftButtonOut()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.LeftButtonOut();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].LeftButtonOut();
 	}
 }
 
 function RightButtonStartPress()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.RightButtonStartPress();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].RightButtonStartPress();
 	}
 }
 
 function RightButtonIn()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.RightButtonIn();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].RightButtonIn();
 	}
 }
 
 function RightButtonOut()
 {
-	if ( ::RHTerminal.StaticTerminalInstance )
+	if ( getroottable()["STATIC_TERMINALS"][self.GetName()] )
 	{
-		::RHTerminal.StaticTerminalInstance.RightButtonOut();
+		getroottable()["STATIC_TERMINALS"][self.GetName()].RightButtonOut();
 	}
 }

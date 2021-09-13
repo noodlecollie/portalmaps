@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_TERMINALS_COMMON_DEFS") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_COMMON_DEFS") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_COMMON_DEFS"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_COMMON_DEFS"] <- true;
 
 IncludeScript("rowhammer/terminals/common/ScriptEnv.nut");
 

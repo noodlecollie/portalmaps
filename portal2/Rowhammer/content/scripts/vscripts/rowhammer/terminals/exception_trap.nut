@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_TERMINALS_EXCEPTION_TRAP") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_EXCEPTION_TRAP") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_EXCEPTION_TRAP"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_EXCEPTION_TRAP"] <- true;
 
 IncludeScript("rowhammer/terminals/common/Defs.nut");
 IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
@@ -73,7 +73,7 @@ class EventHandler extends ::RHTerminal.EventHandler
 	}
 }
 
-local inst = ::RHTerminal.StaticTerminalInstance;
+local inst = ::RHTerminal.CreateAndRegisterInstance(self);
 
 inst.SetEventHandler(EventHandler());
 inst.SetLeftButtonAnimation(::RHTerminal.ButtonSymbolAnimation.CIRCLE);
@@ -81,5 +81,5 @@ inst.SetRightButtonAnimation(::RHTerminal.ButtonSymbolAnimation.CIRCLE);
 
 function PowerOn()
 {
-	::RHTerminal.StaticTerminalInstance.SetTerminalPowerOn(true);
+	::RHTerminal.GetInstance(self).SetTerminalPowerOn(true);
 }

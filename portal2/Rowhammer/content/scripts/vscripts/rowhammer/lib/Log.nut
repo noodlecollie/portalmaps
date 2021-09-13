@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_LIB_LOG") )
+if ( getroottable().rawin(self.GetName() + "_INC_LIB_LOG") )
 {
 	return;
 }
 
-getroottable()["INC_LIB_LOG"] <- true;
+getroottable()[self.GetName() + "_INC_LIB_LOG"] <- true;
 
 ::Log <-
 {

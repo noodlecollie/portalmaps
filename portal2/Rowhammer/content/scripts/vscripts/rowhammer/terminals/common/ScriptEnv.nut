@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_TERMINALS_COMMON_SCRIPTENV") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_COMMON_SCRIPTENV") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_COMMON_SCRIPTENV"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_COMMON_SCRIPTENV"] <- true;
 
 // Ensures that the script environment container object exists.
 ::RHTerminal <-

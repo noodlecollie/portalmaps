@@ -1,0 +1,17 @@
+UnlitGeneric
+{
+	$basetexture "models/rowhammer/terminal_screens/awaiting_message/screen5"
+	$alphatest 1
+	$alphatestreference 0.5
+	$allowalphatocoverage 1
+	$surfaceprop "glass"
+	$model 1
+	
+	// This must be here in order for the texture to react to the entity render colour setting.
+	Proxies
+	{
+		Empty
+		{
+		}
+	}
+}

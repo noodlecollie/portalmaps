@@ -1,9 +1,9 @@
-if ( getroottable().rawin("INC_TERMINALS_TEST") )
+if ( getroottable().rawin(self.GetName() + "_INC_TERMINALS_TEST") )
 {
 	return;
 }
 
-getroottable()["INC_TERMINALS_TEST"] <- true;
+getroottable()[self.GetName() + "_INC_TERMINALS_TEST"] <- true;
 
 // Defs relevant to terminal operation - skins for certain models, etc.
 IncludeScript("rowhammer/terminals/common/Defs.nut");
@@ -18,6 +18,14 @@ printl("Entity using script: " + self.GetName() + " (" + self.GetClassname() + "
 class EventHandler extends ::RHTerminal.EventHandler
 {
 	skinNo = 0;
+
+	function PowerOn(terminal)
+	{
+	}
+
+	function PowerOff(terminal)
+	{
+	}
 
 	function LeftButtonStartPress(terminal)
 	{
@@ -62,7 +70,7 @@ class EventHandler extends ::RHTerminal.EventHandler
 	}
 }
 
-local inst = ::RHTerminal.StaticTerminalInstance;
+local inst = ::RHTerminal.CreateAndRegisterInstance(self);
 
 inst.SetEventHandler(EventHandler());
 inst.SetLeftButtonAnimation(::RHTerminal.ButtonSymbolAnimation.SQUARE);

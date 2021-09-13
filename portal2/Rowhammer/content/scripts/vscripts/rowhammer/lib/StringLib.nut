@@ -1,11 +1,11 @@
 // Guess who's a C programmer as their day job?
 // (Hint: it's me)
-if ( getroottable().rawin("INC_LIB_STRINGLIB") )
+if ( getroottable().rawin(self.GetName() + "_INC_LIB_STRINGLIB") )
 {
 	return;
 }
 
-getroottable()["INC_LIB_STRINGLIB"] <- true;
+getroottable()[self.GetName() + "_INC_LIB_STRINGLIB"] <- true;
 
 ::StringLib <-
 {
