@@ -258,10 +258,6 @@ if ( !getroottable().rawin("STATIC_TERMINALS") )
 	::Log.DevLog("Creating and registering terminal instance for \"" + outer.GetName() + "\"");
 
 	getroottable()["STATIC_TERMINALS"][outer.GetName()] <- ::RHTerminal.TerminalInstance(outer);
-
-	// Remove me
-	printl("Table has " + getroottable()["STATIC_TERMINALS"].len() + " entries");
-
 	return getroottable()["STATIC_TERMINALS"][outer.GetName()];
 }
 

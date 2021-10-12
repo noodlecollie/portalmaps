@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8973"
-	"mapversion" "840"
+	"mapversion" "845"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "199"
+	"mapversion" "845"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -18737,7 +18737,7 @@ entity
 	"replace02" "$screen_script rowhammer/terminals/awaiting_message.nut"
 	"replace03" "$screen_model models/rowhammer/terminal_screen_awaiting_message.mdl"
 	"replace04" "$screen_init_func PowerOn()"
-	"targetname" "maint_room_terminal"
+	"targetname" "msg_room_terminal"
 	"origin" "580.591 436.799 510.805"
 	editor
 	{
@@ -18751,10 +18751,10 @@ entity
 {
 	"id" "43583"
 	"classname" "logic_relay"
-	"targetname" "maint_room_terminal_poweron"
+	"targetname" "msg_room_terminal_poweron"
 	connections
 	{
-		"OnTrigger" "maint_room_terminalinstance:init;Trigger0-1"
+		"OnTrigger" "msg_room_terminalinstance:init;Trigger0-1"
 	}
 	"origin" "626.916 417.468 457"
 	editor
@@ -18904,7 +18904,7 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnStartTouch" "maint_room_terminal_poweronTrigger0-1"
+		"OnStartTouch" "msg_room_terminal_poweronTrigger0-1"
 	}
 	solid
 	{
@@ -22184,7 +22184,7 @@ entity
 	"replace02" "$screen_script rowhammer/terminals/exception_trap.nut"
 	"replace03" "$screen_model models/rowhammer/terminal_screen_exception_trap.mdl"
 	"replace04" "$screen_init_func PowerOn()"
-	"targetname" "terminal_test1"
+	"targetname" "holding_room_terminal"
 	"origin" "-40 -132 56"
 	editor
 	{
@@ -24344,7 +24344,7 @@ entity
 	connections
 	{
 		"OnFullyClosed" "maint_panel_moverClose0-1"
-		"OnFullyOpen" "terminal_test1instance:init;Trigger0-1"
+		"OnFullyOpen" "holding_room_terminalinstance:init;Trigger0-1"
 	}
 	solid
 	{
@@ -31067,8 +31067,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[619.95 488.526 528.773]"
-		"look" "[528.185 411.268 484.161]"
+		"position" "[690.436 523.713 529.132]"
+		"look" "[651.573 406.237 496.439]"
 	}
 }
 cordons

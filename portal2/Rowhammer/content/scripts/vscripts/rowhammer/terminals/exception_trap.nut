@@ -8,7 +8,7 @@ getroottable()[self.GetName() + "_INC_TERMINALS_EXCEPTION_TRAP"] <- true;
 IncludeScript("rowhammer/terminals/common/Defs.nut");
 IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
-::Screens <-
+::ET_Screens <-
 {
 	EMPTY = 0,
 	MAIN = 1,
@@ -18,7 +18,7 @@ IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
 class EventHandler extends ::RHTerminal.EventHandler
 {
-	currentScreen = ::Screens.MAIN;
+	currentScreen = ::ET_Screens.MAIN;
 
 	function PowerOn(terminal)
 	{
@@ -27,7 +27,7 @@ class EventHandler extends ::RHTerminal.EventHandler
 
 	function PowerOff(terminal)
 	{
-		currentScreen = ::Screens.MAIN;
+		currentScreen = ::ET_Screens.MAIN;
 		terminal.SetScreen(currentScreen);
 	}
 
@@ -41,13 +41,13 @@ class EventHandler extends ::RHTerminal.EventHandler
 
 	function LeftButtonOut(terminal)
 	{
-		if ( currentScreen == ::Screens.ESCALATE )
+		if ( currentScreen == ::ET_Screens.ESCALATE )
 		{
-			currentScreen = ::Screens.MAIN;
+			currentScreen = ::ET_Screens.MAIN;
 		}
-		else if ( currentScreen == ::Screens.MAIN )
+		else if ( currentScreen == ::ET_Screens.MAIN )
 		{
-			currentScreen = ::Screens.EXIT;
+			currentScreen = ::ET_Screens.EXIT;
 			EntFire("release_relay", "Trigger", "", 0.0, terminal);
 		}
 
@@ -64,9 +64,9 @@ class EventHandler extends ::RHTerminal.EventHandler
 
 	function RightButtonOut(terminal)
 	{
-		if ( currentScreen == ::Screens.MAIN )
+		if ( currentScreen == ::ET_Screens.MAIN )
 		{
-			currentScreen = ::Screens.ESCALATE;
+			currentScreen = ::ET_Screens.ESCALATE;
 		}
 
 		terminal.SetScreen(currentScreen);
