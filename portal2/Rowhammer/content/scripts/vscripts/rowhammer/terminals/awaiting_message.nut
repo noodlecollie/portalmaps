@@ -64,6 +64,10 @@ class EventHandler extends ::RHTerminal.EventHandler
 			EntFire("ignore_second_warning", "Trigger", "", 0.0, terminal);
 			currentScreen = screenToReturnTo;
 		}
+		else if ( currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS )
+		{
+			currentScreen = warningToReturnTo;
+		}
 
 		terminal.SetScreen(currentScreen);
 	}
@@ -107,12 +111,12 @@ class EventHandler extends ::RHTerminal.EventHandler
 		else if ( currentScreen == ::AM_Screens.POWER_WARNING_THIRTY_PERCENT )
 		{
 			warningToReturnTo = currentScreen;
-			currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
+			currentScreen = ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
 		}
 		else if ( currentScreen == ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT )
 		{
 			warningToReturnTo = currentScreen;
-			currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
+			currentScreen = ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
 		}
 
 		terminal.SetScreen(currentScreen);
