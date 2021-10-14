@@ -117,6 +117,12 @@ class ::RHTerminal.TerminalInstance
 		}
 	}
 
+	function LockAllButtons()
+	{
+		EntFireByHandle(_LeftButton, "Lock", "", 0.0, _Monitor, _Monitor);
+		EntFireByHandle(_RightButton, "Lock", "", 0.0, _Monitor, _Monitor);
+	}
+
 	/////////////////////////////////////////////////////////////
 	// Event handler functions from terminal components
 	/////////////////////////////////////////////////////////////

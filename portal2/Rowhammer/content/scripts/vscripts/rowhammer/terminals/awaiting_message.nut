@@ -8,26 +8,25 @@ getroottable()[self.GetName() + "_INC_TERMINALS_AWAITING_MESSAGE"] <- true;
 IncludeScript("rowhammer/terminals/common/Defs.nut");
 IncludeScript("rowhammer/terminals/common/TerminalInstance.nut");
 
+// The ordering here could be improved,
+// but I've named the textures now and I CBA
 ::AM_Screens <-
 {
 	EMPTY = 0,
-	POWER_WARNING_THIRTY_PERCENT = 1,
-	POWER_WARNING_TWENTY_NINE_PERCENT = 2,
-	POWER_WARINING_INSUFFICIENT_PERMISSIONS = 3,
-	MESSAGE_HOME_SCREEN = 4,
+	POWER_WARNING_TWENTY_NINE_PERCENT = 1,
+	POWER_WARINING_INSUFFICIENT_PERMISSIONS = 2,
+	MESSAGE_HOME_SCREEN = 3,
+	MESSAGE_HOME_SCREEN_WITH_NOTIF = 4,
 	MESSAGE_INFO = 5,
 	DISPLAY_MESSAGE = 6,
 	DISPLAY_MESSAGE_SOURCE = 7,
-	TRANSPORTING = 8
+	RENDER = 8,
+	TRANSPORTING = 9
 };
 
 class EventHandler extends ::RHTerminal.EventHandler
 {
 	currentScreen = ::AM_Screens.MESSAGE_HOME_SCREEN;
-	haveTriggeredFirstWarning = false;
-	haveTriggeredSecondWarning = false;
-	screenToReturnTo = ::AM_Screens.MESSAGE_HOME_SCREEN;
-	warningToReturnTo = ::AM_Screens.POWER_WARNING_THIRTY_PERCENT;
 
 	function PowerOn(terminal)
 	{
@@ -48,25 +47,25 @@ class EventHandler extends ::RHTerminal.EventHandler
 	{
 	}
 
+	// Go back
 	function LeftButtonOut(terminal)
 	{
-		if ( currentScreen >= ::AM_Screens.MESSAGE_INFO && currentScreen < ::AM_Screens.TRANSPORTING )
+		if ( currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS )
 		{
-			currentScreen -= 1;
-		}
-		else if ( currentScreen == ::AM_Screens.POWER_WARNING_THIRTY_PERCENT )
-		{
-			EntFire("ignore_first_warning", "Trigger", "", 0.0, terminal);
-			currentScreen = screenToReturnTo;
+			// Pop back to warning
+			currentScreen = ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT;
 		}
 		else if ( currentScreen == ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT )
 		{
-			EntFire("ignore_second_warning", "Trigger", "", 0.0, terminal);
-			currentScreen = screenToReturnTo;
+			// Ignore warning and pop back to home screen
+			// but with notification icon now present
+			currentScreen = ::AM_Screens.MESSAGE_HOME_SCREEN_WITH_NOTIF;
+			EntFire("ignore_warning", "Trigger", "", 0.0, terminal);
 		}
-		else if ( currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS )
+		else if ( currentScreen >= ::AM_Screens.MESSAGE_INFO && currentScreen < ::AM_Screens.TRANSPORTING )
 		{
-			currentScreen = warningToReturnTo;
+			// We're allowed to go back one screen.
+			currentScreen -= 1;
 		}
 
 		terminal.SetScreen(currentScreen);
@@ -82,41 +81,31 @@ class EventHandler extends ::RHTerminal.EventHandler
 
 	function RightButtonOut(terminal)
 	{
-		if ( currentScreen >= ::AM_Screens.MESSAGE_HOME_SCREEN && currentScreen < ::AM_Screens.TRANSPORTING )
+		if ( currentScreen == ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS )
 		{
-			if ( currentScreen == ::AM_Screens.MESSAGE_HOME_SCREEN && !haveTriggeredFirstWarning )
-			{
-				screenToReturnTo = currentScreen;
-				currentScreen = ::AM_Screens.POWER_WARNING_THIRTY_PERCENT;
-				EntFire("trigger_first_warning", "Trigger", "", 0.0, terminal);
-				haveTriggeredFirstWarning = true;
-			}
-			else if ( currentScreen == ::AM_Screens.DISPLAY_MESSAGE_SOURCE && !haveTriggeredSecondWarning )
-			{
-				screenToReturnTo = currentScreen;
-				currentScreen = ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT;
-				EntFire("trigger_second_warning", "Trigger", "", 0.0, terminal);
-				haveTriggeredSecondWarning = true;
-			}
-			else
-			{
-				currentScreen += 1;
-
-				if ( currentScreen == ::AM_Screens.TRANSPORTING )
-				{
-					EntFire("trigger_transport", "Trigger", "", 0.0, terminal);
-				}
-			}
-		}
-		else if ( currentScreen == ::AM_Screens.POWER_WARNING_THIRTY_PERCENT )
-		{
-			warningToReturnTo = currentScreen;
-			currentScreen = ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
+			// Cannot go any further
 		}
 		else if ( currentScreen == ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT )
 		{
-			warningToReturnTo = currentScreen;
+			// Cannot escalate warning
 			currentScreen = ::AM_Screens.POWER_WARINING_INSUFFICIENT_PERMISSIONS;
+		}
+		else if ( currentScreen == ::AM_Screens.MESSAGE_HOME_SCREEN )
+		{
+			// Trigger warning
+			currentScreen = ::AM_Screens.POWER_WARNING_TWENTY_NINE_PERCENT;
+			EntFire("trigger_warning", "Trigger", "", 0.0, terminal);
+		}
+		else if ( currentScreen < ::AM_Screens.TRANSPORTING )
+		{
+			// We're allowed to go forward one screen.
+			currentScreen += 1;
+
+			if ( currentScreen == ::AM_Screens.TRANSPORTING )
+			{
+				terminal.LockAllButtons();
+				EntFire("trigger_transport", "Trigger", "", 0.0, terminal);
+			}
 		}
 
 		terminal.SetScreen(currentScreen);

@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8419"
-	"mapversion" "79"
+	"editorbuild" "8973"
+	"mapversion" "81"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "79"
+	"mapversion" "81"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -391,6 +391,7 @@ entity
 	connections
 	{
 		"OnProxyRelay" "initTrigger0-1"
+		"OnProxyRelay" "screenColor0-1"
 	}
 	"origin" "0 8 24"
 	editor
