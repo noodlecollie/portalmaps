@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8973"
-	"mapversion" "1484"
+	"mapversion" "1500"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -38,13 +38,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "64"
+	"nGridSpacing" "8"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "59054"
-	"mapversion" "1484"
+	"mapversion" "1500"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -66536,7 +66536,7 @@ world
 		{
 			"id" "44726"
 			"plane" "(2688 1536 512) (2560 1536 512) (2560 1536 384)"
-			"material" "METAL/BLACK_WALL_METAL_002C"
+			"material" "METAL/BLACK_WALL_METAL_002B"
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
@@ -119047,6 +119047,182 @@ world
 }
 entity
 {
+	"id" "148386"
+	"classname" "func_instance"
+	"angles" "-0 90 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "2576 2240 400"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148423"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "1920 1296 624"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148438"
+	"classname" "func_instance"
+	"angles" "-0 -180 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "2688 880 496"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148450"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "1408 1008 400"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148474"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "1024 112 752"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148486"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "384 1520 752"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148501"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "0 1776 688"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148516"
+	"classname" "func_instance"
+	"angles" "-0 90 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "-192 1280 448"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148525"
+	"classname" "func_instance"
+	"angles" "-0 0 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "-576 2320 432"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148551"
+	"classname" "func_instance"
+	"angles" "-0 -90 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "1136 1408 496"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "148570"
+	"classname" "func_instance"
+	"angles" "-0 90 0"
+	"file" "instances/rowhammer/security_camera.vmf"
+	"fixup_style" "2"
+	"origin" "2608 1536 432"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
 	"id" "146533"
 	"classname" "func_clip_vphysics"
 	"StartDisabled" "0"
@@ -135410,6 +135586,7 @@ entity
 		"OnTrigger" "powercut_lightsTurnOff0-1"
 		"OnTrigger" "rha_buildup_final_relayTrigger20-1"
 		"OnTrigger" "companion_musicStopSound0-1"
+		"OnTrigger" "security_cameraDisable0-1"
 	}
 	"origin" "-568 2152 328"
 	editor
@@ -155717,8 +155894,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-297.108 2555.91 437.587]"
-		"look" "[-438.804 2745.29 303.23]"
+		"position" "[2601.2 1836.93 427.843]"
+		"look" "[2572.99 1568.3 395.64]"
 	}
 }
 cordons
