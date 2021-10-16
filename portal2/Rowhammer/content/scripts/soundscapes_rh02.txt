@@ -38,7 +38,7 @@
 	"playlooping"
 	{
 		"wave" "rowhammer\render_bg_drone.wav"
-		"volume" "1.0"
+		"volume" "0.8"
 		"soundlevel" "SNDLVL_NONE"
 	}
 }
