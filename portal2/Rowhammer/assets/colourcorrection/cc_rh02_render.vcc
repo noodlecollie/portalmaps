@@ -1,17 +1,17 @@
 <!-- dmx encoding keyvalues2 1 format dmx 1 -->
 "DmeColorCorrectionOperatorList"
 {
-	"id" "elementid" "1dbad712-5694-476b-9ace-83004d557991"
+	"id" "elementid" "077618cc-27f6-4130-903b-a46e0cacff8f"
 	"operators" "element_array" 
 	[
 		"CDmeColorCorrectionSelectedHSVOp"
 		{
-			"id" "elementid" "cfd54df1-d195-428a-94b7-22fe5a04fb5f"
+			"id" "elementid" "10918a3f-8785-463d-b7c3-42be76d4fd4a"
 			"blendFactor" "float" "1"
 			"colorize" "bool" "0"
-			"deltaHSV" "vector3" "-69 -0.631372571 -0.0156862754"
+			"deltaHSV" "vector3" "-69 -1 -0.0352941193"
 			"enabled" "bool" "1"
-			"fuzziness" "float" "0.0941176564"
+			"fuzziness" "float" "0.1019607931"
 			"invertSelection" "bool" "1"
 			"name" "string" "Desat"
 			"selectedHSVs" "vector3_array" 
@@ -23,7 +23,22 @@
 				"0.4000000358 0.6823529601 0.6901960969"
 			]
 			"selectionMethod" "int" "8"
-			"tolerance" "float" "0.9294118285"
+			"tolerance" "float" "0.9411765337"
+		},
+		"CDmeColorCorrectionCurvesOp"
+		{
+			"id" "elementid" "4d580c16-811c-40cd-a53a-f213c139a83c"
+			"blendFactor" "float" "0.4705882668"
+			"channelMask" "int" "7"
+			"controlPoints" "vector3_array" 
+			[
+				"0 0 0",
+				"0.068062827 0.0785340071 0",
+				"0.5497382283 0.7801046968 0",
+				"1 1 0"
+			]
+			"enabled" "bool" "1"
+			"name" "string" "Brightness"
 		}
 	]
 }

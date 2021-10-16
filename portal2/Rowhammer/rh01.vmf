@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8973"
-	"mapversion" "1501"
+	"mapversion" "1505"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "59054"
-	"mapversion" "1501"
+	"mapversion" "1505"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -119771,12 +119771,12 @@ entity
 {
 	"id" "142467"
 	"classname" "ambient_generic"
-	"health" "10"
-	"message" "World.GladosPotatoZap"
+	"health" "5"
+	"message" "rowhammer/continuous_beep.wav"
 	"pitch" "100"
 	"pitchstart" "100"
 	"radius" "1250"
-	"spawnflags" "49"
+	"spawnflags" "17"
 	"targetname" "zap_sound"
 	"origin" "2728 2248 264"
 	editor
@@ -119798,7 +119798,7 @@ entity
 		"OnTrigger" "zap_soundPlaySound0-1"
 		"OnTrigger" "zap_soundStopSound0.1-1"
 		"OnTrigger" "zap_soundPlaySound0.5-1"
-		"OnTrigger" "zap_soundStopSound1-1"
+		"OnTrigger" "zap_soundStopSound0.7-1"
 		"OnTrigger" "rha_white_flashFade0-1"
 		"OnTrigger" "rha_white_flashFade0.5-1"
 		"OnTrigger" "player_point_teleportTeleport1-1"
@@ -148602,20 +148602,23 @@ hidden
 		}
 	}
 }
-entity
+hidden
 {
-	"id" "69455"
-	"classname" "func_instance"
-	"angles" "-90 90 0"
-	"file" "instances/p2editor/door_frame_black.vmf"
-	"origin" "2496 2112 320"
-	editor
+	entity
 	{
-		"color" "220 30 220"
-		"visgroupid" "11"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
+		"id" "69455"
+		"classname" "func_instance"
+		"angles" "-90 90 0"
+		"file" "instances/p2editor/door_frame_black.vmf"
+		"origin" "2496 2112 320"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "11"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 0]"
+		}
 	}
 }
 entity
@@ -155970,11 +155973,15 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[2400.17 1241.71 493.666]"
-		"look" "[2247.29 1024.94 433.406]"
+		"position" "[2435.75 2261.13 276.142]"
+		"look" "[2460.38 1990.77 259.062]"
 	}
 }
 cordons
 {
 	"active" "0"
+}
+quickhide
+{
+	"count" "3"
 }
