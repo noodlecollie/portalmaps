@@ -1,4 +1,44 @@
 "rowhammer.silent"
 {
 	"dsp" "1"
+	"dsp_volume" "1.0"
+}
+
+"rowhammer.exceptiontrap.exit"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\quiet_cellblock_amb.wav"
+		"volume" "0.1"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.exceptiontrap.outside"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "ambient\atmosphere\quiet_cellblock_amb.wav"
+		"volume" "0.3"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.render.antechamber"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\render_bg_drone.wav"
+		"volume" "1.0"
+		"soundlevel" "SNDLVL_NONE"
+	}
 }
