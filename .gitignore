@@ -227,3 +227,6 @@ pip-log.txt
 
 # Ableton Live caches
 *.asd
+
+*.blend1
+.*-autosave.kra
