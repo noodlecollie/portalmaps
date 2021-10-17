@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8973"
-	"mapversion" "1505"
+	"mapversion" "1506"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "59054"
-	"mapversion" "1505"
+	"mapversion" "1176"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -148602,23 +148602,20 @@ hidden
 		}
 	}
 }
-hidden
+entity
 {
-	entity
+	"id" "69455"
+	"classname" "func_instance"
+	"angles" "-90 90 0"
+	"file" "instances/p2editor/door_frame_black.vmf"
+	"origin" "2496 2112 320"
+	editor
 	{
-		"id" "69455"
-		"classname" "func_instance"
-		"angles" "-90 90 0"
-		"file" "instances/p2editor/door_frame_black.vmf"
-		"origin" "2496 2112 320"
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupid" "11"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-			"logicalpos" "[0 0]"
-		}
+		"color" "220 30 220"
+		"visgroupid" "11"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 entity
@@ -155973,15 +155970,11 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[2435.75 2261.13 276.142]"
-		"look" "[2460.38 1990.77 259.062]"
+		"position" "[104.449 1735.28 664.772]"
+		"look" "[-139.897 1816.53 577.11]"
 	}
 }
 cordons
 {
 	"active" "0"
-}
-quickhide
-{
-	"count" "3"
 }

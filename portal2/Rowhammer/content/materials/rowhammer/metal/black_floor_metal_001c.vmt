@@ -1,9 +1,9 @@
 LightMappedGeneric
 {
-$basetexture "metal/black_floor_metal_001b"
+$basetexture "metal/black_floor_metal_001c"
 $bumpmap "metal/black_floor_tile_001c_height-ssbump"
 $ssbump 1
-$reflectivity "[ 0.1 0.1 0.1 ]" 
+$reflectivity "[ 0.1 0.1 0.1 ]"
 $envmap env_cubemap
 //$envmap "metal/black_wall_envmap_002a"
 //hdr

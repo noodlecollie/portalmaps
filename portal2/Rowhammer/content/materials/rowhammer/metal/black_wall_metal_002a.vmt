@@ -4,7 +4,7 @@ $basetexture "metal/black_wall_metal_002a"
 $surfaceprop metal
 
 $bumpmap "metal/black_wall_metal_002_height-ssbump"
-$reflectivity "[ 0.6 0.6 0.6 ]" 
+$reflectivity "[ 0.1 0.1 0.1 ]" 
 $ssbump 1
 $ssbumpmathfix 1
 $envmap env_cubemap
