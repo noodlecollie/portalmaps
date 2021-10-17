@@ -13,6 +13,8 @@ $cdmaterials "models\rowhammer\paper"
 $texturegroup "skinfamilies"
 {
 	{ "paper_blank" "paper_writing" }
+	{ "paper_blank" "paper_writing1" }
+	{ "paper_blank" "paper_writing2" }
 }
 
 $sequence "BindPose" "paper_flat.smd"

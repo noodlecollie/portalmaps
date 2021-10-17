@@ -1,6 +1,8 @@
 VertexLitGeneric
 {
-	$basetexture "models/rowhammer/paper/paper_writing"
+	// By default this also points to blank.
+	// We override it in other skins.
+	$basetexture "models/rowhammer/paper/paper_blank"
 	$surfaceprop "paper"
 	$model 1
 }

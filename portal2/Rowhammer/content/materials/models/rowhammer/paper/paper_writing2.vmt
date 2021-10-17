@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "models/rowhammer/paper/paper_writing2"
+	$surfaceprop "paper"
+	$model 1
+}
