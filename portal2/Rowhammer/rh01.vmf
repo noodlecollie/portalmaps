@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "59054"
-	"mapversion" "1176"
+	"mapversion" "1506"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -155970,8 +155970,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[104.449 1735.28 664.772]"
-		"look" "[-139.897 1816.53 577.11]"
+		"position" "[2182.48 1114.56 490.115]"
+		"look" "[2199.21 1380.87 437.28]"
 	}
 }
 cordons
