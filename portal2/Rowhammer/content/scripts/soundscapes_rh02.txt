@@ -42,3 +42,92 @@
 		"soundlevel" "SNDLVL_NONE"
 	}
 }
+
+"rowhammer.render.antechamber_quiet"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\render_bg_drone.wav"
+		"volume" "0.3"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.render.back_corridors"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\render_bg_drone.wav"
+		"volume" "0.1"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_sphere_int_water_lp_01.wav"
+		"volume" "0.15"
+		"soundlevel" "SNDLVL_NONE"
+	}
+}
+
+"rowhammer.render.back_corridors_breath"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\render_bg_drone.wav"
+		"volume" "0.1"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_sphere_int_water_lp_01.wav"
+		"volume" "0.15"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\breath.wav"
+		"volume" "0.4"
+		"soundlevel" "SNDLVL_TALKING"
+		"position" 0
+	}
+}
+
+"rowhammer.render.back_corridors_end"
+{
+	"dsp" "1"
+	"dsp_volume" "1.0"
+	
+	"playlooping"
+	{
+		"wave" "rowhammer\render_bg_drone.wav"
+		"volume" "0.1"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\nature\water\amb_sphere_int_water_lp_01.wav"
+		"volume" "0.15"
+		"soundlevel" "SNDLVL_NONE"
+	}
+	
+	"playlooping"
+	{
+		"wave" "ambient\electrical\amb_hotel_refrigeration_lp_01.wav"
+		"volume" "1.0"
+		"soundlevel" "SNDLVL_STATIC"
+		"position" 0
+	}
+}
